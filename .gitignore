@@ -7,3 +7,10 @@ sources/extracts/
 sources/video-*
 sources/*.pdf
 sources/**/*.pdf
+# research downloads: keep only the curated CSV and notes
+sources/air-extra/*
+!sources/air-extra/air_extra.*
+sources/emissions-extra/*
+!sources/emissions-extra/emissions_extra.*
+sources/production/*
+!sources/production/production.*

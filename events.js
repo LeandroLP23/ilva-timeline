@@ -1,4 +1,4 @@
-// Site data. Every entry has at least one source; open points are in ricerca.md §6.
+// Site data. Every entry has at least one source; open points are in research.md §6.
 // category: history | environment | health | justice | work
 // zone: all | hot | yards | steelshop | mills | tamburi | port | '' (no highlight)
 
@@ -152,7 +152,7 @@ window.PERIODS = [
             ['Cannone et al., Epidemiologia & Prevenzione 2015;39(3):176-182', 'https://sist.sanita.puglia.it/documents/890301/6715968/2015+Incidenza+dei+tumori+maligni+infantili+in+Puglia,+2003-2008_EP_3_176_Art2_full.pdf/5005d375-48c2-41d1-a67c-15068157644d']] },
   { from: 2009, to: 2011, kind: 'measurement', theme: 'environment', value: '> 1 ng/m³', area: 'tamburi', short: 'benzo(a)pirene oltre il valore obiettivo, 2009–2011', 
     title: 'benzo(a)pirene ai Tamburi oltre il valore obiettivo',
-    note: 'Medie annue alla centralina ARPA di via Machiavelli: 1,39 ng/m³ nel 2009, 1,82 nel 2010, 1,14 nel 2011, contro circa 0,3 a Talsano. Dal 2012 il valore scende sotto l’obiettivo (0,76), poi a 0,1–0,2.',
+    note: 'Medie annue alla centralina ARPA di via Machiavelli: 1,39 ng/m³ nel 2009, 1,82 nel 2010, 1,14 nel 2011, contro circa 0,3 a Talsano. Dal 2012 il valore scende sotto l’obiettivo (0,76); dal 2013 resta fra 0,1 e 0,3.',
     sources: [['ARPA Puglia, report benzo(a)pirene 2016, tabella 3', 'https://www.arpa.puglia.it/moduli/output_immagine.php?id=5310'],
             ['ARPA Puglia, relazione tecnica preliminare 2008–2009', 'https://www.arpa.puglia.it/moduli/output_immagine.php?id=5351']] },
   { from: 2010, to: 2010, kind: 'estimate', theme: 'health', value: '22.500', area: 'city', short: 'residenti con rischio di tumore oltre 1 su 10.000 (2010)', 
@@ -169,7 +169,12 @@ window.PERIODS = [
     sources: [['Epidemiologia & Prevenzione 2023, SENTIERI 6', 'https://iris.cnr.it/retrieve/cf326a1b-65d2-489e-ab4b-15e63d979dc7/sentieri-6_erratacorrige_1-201-300.pdf']] },
 ];
 
-// Steel produced (Mt). ponytail: sparse points; almost all of 1966-2006 is missing (ricerca.md §3)
-// 1965 USGS; 2007 and 2025 Il Post; 2013-2015 ISPRA 2026; 2020-2021 company data; 2022 GMK Center; 2023 CEO Morselli
-window.PRODUCTION = [[1964, 0], [1965, 1.5], [2007, 10], [2013, 5.7], [2014, 6.3], [2015, 4.7],
+// Crude steel produced at Taranto (Mt); sources per year in sources/production/production.csv.
+// 1966-1979 Finsider plans (Romeo 2014); 1980-2001 Nuova Italsider/IRI files (Caiazzo 2025); 2005 Ilva AIA application;
+// 2007-2010 Ilva environment report 2011; 2013-2014 Ministry reports to Parliament; 2015 ISPRA; 2020-2023 company data.
+// 1964-1965 and 2025 from earlier sources (USGS, Il Post). 1998, 2006 and 2024 left out: conflicting or bounds only.
+window.PRODUCTION = [[1964, 0], [1965, 1.5], [1966, 2.2], [1969, 2.7], [1970, 3.4], [1971, 3.9], [1972, 4.4], [1973, 5.4],
+  [1974, 6.9], [1975, 7.0], [1976, 7.8], [1977, 7.4], [1978, 7.7], [1979, 7.5], [1980, 8.5], [1981, 8.2], [1982, 7.4],
+  [1983, 8.2], [1984, 8.8], [1985, 8.5], [1987, 7.8], [1990, 8.8], [1992, 7.8], [1993, 7.8], [1994, 8.4], [2001, 6.8],
+  [2005, 9.2], [2007, 9.4], [2008, 9.1], [2009, 4.6], [2010, 7.0], [2013, 5.7], [2014, 6.2], [2015, 4.7],
   [2020, 3.4], [2021, 4.1], [2022, 3.5], [2023, 3.0], [2025, 2]];
