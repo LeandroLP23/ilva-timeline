@@ -45,7 +45,7 @@ python build_all.py --air-archive DIR        # rebuilds the air series from the 
 
 Some inputs are large or third-party and are not in the repository; the steps that need them are skipped and their committed outputs kept:
 
-- **LiDAR tiles** (`sources/lidar/`, about 255 MB): DSM First and DTM at 1 m from the MASE PST database, downloadable tile by tile from the MASE remote-sensing portal (`sim.mase.gov.it`), flights 2008–2010. Without them the heights, reliefs, conveyors and port steps are skipped.
+- **LiDAR tiles** (`sources/lidar/`, about 255 MB): DSM First and DTM at 1 m from the MASE PST database, downloadable tile by tile from the [MASE PST data portal](https://gn.mase.gov.it/portale/distribuzione-dati-pst), flights 2008–2010. Without them the heights, reliefs, conveyors and port steps are skipped.
 - **ARPA Puglia hourly archives** (`sources/arpa-taranto/`): yearly archives from the [ARPA Puglia historical data page](https://www.arpa.puglia.it/pagina3139_dati-storici-qualit-delllaria.html); their ids are listed in `sources/arpa-archive-ids.txt`.
 - **PDF documents** cited in `methods.html` and `research.md`: linked there, not stored here.
 
@@ -57,3 +57,9 @@ Some inputs are large or third-party and are not in the repository; the steps th
 - Stack heights and plant layout: AIA 2011 permit documents (MASE).
 
 The full list of sources, with links, is on the methods page.
+
+## Licence
+
+- Code: [MIT](LICENSE).
+- Texts and research notes: [CC BY 4.0](LICENSE-CONTENT.md).
+- Data derived from OpenStreetMap: ODbL 1.0; LiDAR-derived data: CC BY 4.0 (details in [`LICENSE-CONTENT.md`](LICENSE-CONTENT.md)).
