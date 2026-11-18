@@ -17,3 +17,5 @@ sources/production/*
 
 # personal drafts (letters, requests)
 drafts/
+sources/port-extra/*
+!sources/port-extra/port_extra.md

@@ -171,10 +171,11 @@ window.PERIODS = [
 
 // Crude steel produced at Taranto (Mt); sources per year in sources/production/production.csv.
 // 1966-1979 Finsider plans (Romeo 2014); 1980-2001 Nuova Italsider/IRI files (Caiazzo 2025); 2005 Ilva AIA application;
-// 2007-2010 Ilva environment report 2011; 2013-2014 Ministry reports to Parliament; 2015 ISPRA; 2020-2023 company data.
-// 1964-1965 and 2025 from earlier sources (USGS, Il Post). 1998, 2006 and 2024 left out: conflicting or bounds only.
+// 2007-2010 Ilva environment report 2011; 2013-2014 Ministry reports to Parliament; 2015 ISPRA; 2016 EU Decision 2018/1498;
+// 2020-2023 company data; 2024 commissioners (Kallanish, Il Sole 24 Ore). 1965 USGS Minerals Yearbook; 1964 and 2025 earlier sources.
+// Left out: 1998, 2006 and 2011 (conflicting), 2012 (press only), 2017 (estimate).
 window.PRODUCTION = [[1964, 0], [1965, 1.5], [1966, 2.2], [1969, 2.7], [1970, 3.4], [1971, 3.9], [1972, 4.4], [1973, 5.4],
   [1974, 6.9], [1975, 7.0], [1976, 7.8], [1977, 7.4], [1978, 7.7], [1979, 7.5], [1980, 8.5], [1981, 8.2], [1982, 7.4],
   [1983, 8.2], [1984, 8.8], [1985, 8.5], [1987, 7.8], [1990, 8.8], [1992, 7.8], [1993, 7.8], [1994, 8.4], [2001, 6.8],
   [2005, 9.2], [2007, 9.4], [2008, 9.1], [2009, 4.6], [2010, 7.0], [2013, 5.7], [2014, 6.2], [2015, 4.7],
-  [2020, 3.4], [2021, 4.1], [2022, 3.5], [2023, 3.0], [2025, 2]];
+  [2016, 5.8], [2020, 3.4], [2021, 4.1], [2022, 3.5], [2023, 3.0], [2024, 2.0], [2025, 2]];

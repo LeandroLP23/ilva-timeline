@@ -30,10 +30,12 @@ def conveyor(coords, width=4.0):
 # each pier is the stretch of coast south of the root, closed between the two corners where it leaves the quay.
 # Pier order: port master plan (PRP) of the Port Authority, sheet C2.12.
 ROOT = 40.4787
+# AdSP 2022 dates the 5th pier only to the late 1970s: shown from the first year it surely existed
+FIFTH_PIER = 1980
 PIERS = [  # name, longitudes bracketing the tip, year
     ('4° sporgente', (17.203, 17.207), 1974),
     ('3° sporgente', (17.209, 17.213), 1973),
-    ('2° sporgente', (17.2145, 17.217), 1965),
+    ('2° sporgente', (17.2145, 17.217), 1964),  # built 1962-64 (AdSP 2022)
 ]
 
 
@@ -64,9 +66,9 @@ def main():
         if not g:
             continue
         if 'Sporgente' in t.get('name', '') and 'Acciaierie' in t.get('name', ''):
-            feats.append({'type': 'Feature', 'properties': {'kind': 'quay', 'h': 2, 'name': '5° sporgente'},
+            feats.append({'type': 'Feature', 'properties': {'kind': 'quay', 'h': 2, 'name': '5° sporgente', 'since': FIFTH_PIER},
                           'geometry': {'type': 'Polygon', 'coordinates': [[list(p) for p in g]]}})
-            concessions.append({'type': 'Feature', 'properties': {'kind': 'concession', 'name': '5° sporgente', 'since': 1965},
+            concessions.append({'type': 'Feature', 'properties': {'kind': 'concession', 'name': '5° sporgente', 'since': FIFTH_PIER},
                                 'geometry': {'type': 'Polygon', 'coordinates': [[list(p) for p in g]]}})
         elif t.get('man_made') == 'goods_conveyor' and ('Mittal' in t.get('operator', '') or 'ILVA' in t.get('operator', '')):
             for ring in conveyor(g):
