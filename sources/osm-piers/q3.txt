@@ -1,0 +1,10 @@
+[out:json][timeout:120];
+(
+  way["natural"="coastline"](40.455,17.12,40.50,17.24);
+  way["railway"](40.455,17.12,40.495,17.24);
+  way["man_made"="goods_conveyor"](40.455,17.12,40.50,17.24);
+  way["name"](40.455,17.12,40.485,17.24)["name"~"[Mm]olo|[Ss]porgente|[Cc]alata|[Bb]anchina|[Pp]ontile|[Dd]arsena"];
+  way["harbour"](40.455,17.12,40.495,17.24);
+  way["landuse"="port"](40.455,17.12,40.495,17.24);
+);
+out tags geom;

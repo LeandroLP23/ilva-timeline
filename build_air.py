@@ -1,0 +1,128 @@
+"""Annual means of pollutants at the ARPA stations in Taranto, from the 2005-2025 hourly files.
+
+Usage: python build_air.py <folder with the extracted archives, one subfolder per year>
+Writes air-data.csv (year, station, pollutant, mean, valid hours) and air.js for the site.
+"""
+import csv, datetime as dt, glob, json, os, re, sys
+from collections import defaultdict
+from openpyxl import load_workbook
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+# Stations: key -> (name on the site, words identifying it in the sheet/file name)
+STATIONS = {
+    'machiavelli': ('Tamburi, via Machiavelli', ['machiav']),
+    'orsini': ('Tamburi, via Orsini', ['orsini', 'tamburi']),
+    'archimede': ('via Archimede', ['archimede']),
+    'adige': ('via Alto Adige', ['adige']),
+    'paolovi': ('Paolo VI', ['paolo', 'cisi']),
+    'sanvito': ('San Vito', ['vito']),
+    'talsano': ('Talsano', ['talsano']),
+    'wind': ('Statte, SS7 Wind', ['wind']),
+    'statte': ('Statte, via Sorgenti', ['sorgenti', 'statte']),
+}
+POLLUTANTS = {'PM10': 'PM10', 'PM2.5': 'PM2.5', 'PM25': 'PM2.5', 'SO2': 'SO2', 'NO2': 'NO2',
+              'BENZENE': 'Benzene', 'C6H6': 'Benzene', 'IPA': 'IPA', 'IPATOT': 'IPA'}
+
+
+def station(name):
+    n = name.lower()
+    for k, (_, words) in STATIONS.items():
+        if any(p in n for p in words):
+            return k
+    return None
+
+
+def row_year(v, year):
+    if isinstance(v, dt.datetime):
+        return v.year
+    if isinstance(v, str) and re.match(r'\d{4}-\d{2}-\d{2}', v):
+        return int(v[:4])
+    if isinstance(v, str) and re.match(r'\d{2}/\d{2}/\d{4}', v):
+        return int(v[6:10])
+    return None
+
+
+def read_sheet(ws, year):
+    """Returns {pollutant: [values]} for the rows of the given year."""
+    columns, values = None, defaultdict(list)
+    for row in ws.iter_rows(values_only=True):
+        if not row:
+            continue
+        if columns is None:
+            keys = {i: POLLUTANTS.get(re.sub(r'\s', '', str(c)).upper()) for i, c in enumerate(row) if c is not None}
+            keys = {i: k for i, k in keys.items() if k}
+            if keys:
+                columns = keys
+            continue
+        # the date is the first column; 24:00 readings sometimes fall on 1 January of the next year
+        if row_year(row[0], year) not in (year, year + 1):
+            continue
+        for i, k in columns.items():
+            v = row[i] if i < len(row) else None
+            if isinstance(v, str):
+                v = v.replace(',', '.').strip()
+                try:
+                    v = float(v)
+                except ValueError:
+                    v = None
+            if isinstance(v, (int, float)) and v >= 0:
+                values[k].append(float(v))
+    return values
+
+
+def main(root):
+    results = {}
+    for d in sorted(os.listdir(root)):
+        if not d.isdigit():
+            continue
+        year = int(d)
+        for f in sorted(glob.glob(os.path.join(root, d, '**', '*.xlsx'), recursive=True)):
+            rel = os.path.relpath(f, root).lower()
+            if 'brindisi' in rel or 'bat' in os.path.basename(rel):
+                continue
+            wb = load_workbook(f, read_only=True, data_only=True)
+            for name in wb.sheetnames:
+                # in single-sheet files the useful name is the file name
+                k = station(name) or (station(os.path.basename(f)) if len(wb.sheetnames) <= 2 else None)
+                if not k:
+                    continue
+                if '2022' in rel and not name.upper().startswith('TA'):
+                    continue  # the 2022 file mixes Brindisi, Lecce and Taranto
+                for pol, vals in read_sheet(wb[name], year).items():
+                    key = (year, k, pol)
+                    if len(vals) > results.get(key, (0, []))[0]:
+                        results[key] = (len(vals), vals)
+            wb.close()
+        print(year, 'done', file=sys.stderr)
+
+    rows = []
+    for (year, k, pol), (n, vals) in sorted(results.items()):
+        rows.append({'year': year, 'station': k, 'pollutant': pol, 'mean': round(sum(vals) / n, 2), 'n': n})
+    with open(os.path.join(HERE, 'air-data.csv'), 'w', newline='', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=['year', 'station', 'pollutant', 'mean', 'n'])
+        w.writeheader()
+        w.writerows(rows)
+    print(len(rows), 'rows in air-data.csv', file=sys.stderr)
+
+
+def export_js(min_coverage=0.75):
+    """air.js: only means with at least 75% of the hours of the year (criterion of Legislative Decree 155/2010)."""
+    series = defaultdict(dict)
+    with open(os.path.join(HERE, 'air-data.csv'), encoding='utf-8') as fh:
+        for r in csv.DictReader(fh):
+            if int(r['n']) >= min_coverage * 8760:
+                series[f"{r['station']}|{r['pollutant']}"][int(r['year'])] = float(r['mean'])
+    names = {k: v[0] for k, v in STATIONS.items()}
+    with open(os.path.join(HERE, 'air.js'), 'w', encoding='utf-8') as fh:
+        fh.write('// Generated by build_air.py: annual means from validated ARPA Puglia hourly data (coverage >= 75%).\n')
+        fh.write(f'window.AIR = {json.dumps({"stations": names, "series": series}, ensure_ascii=False)};\n')
+    print(len(series), 'series in air.js', file=sys.stderr)
+
+
+if __name__ == '__main__':
+    if sys.argv[1] == '--js':
+        export_js()
+    else:
+        main(sys.argv[1])
+        export_js()

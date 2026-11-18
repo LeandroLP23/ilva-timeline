@@ -1,0 +1,456 @@
+{
+  "cases": [
+    {
+      "name": "Paolo Franco",
+      "age": 24,
+      "death_date": "2003-06-12",
+      "accident_date": null,
+      "area": "Parchi minerali",
+      "contractor": false,
+      "circumstances": "Crollo del braccio di una gru della ditta Cemit",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["l'Unità, 13/06/2003", "https://archivio.unita.news/assets/main/2003/06/13/page_011.pdf"],
+        ["Corriere del Giorno, 20/09/2008 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Il Fatto Quotidiano, 22/02/2024", "https://www.ilfattoquotidiano.it/in-edicola/articoli/2024/02/22/ilva-condannato-per-i-morti-in-fabbrica-il-neo-commissario/7454707/"]
+      ],
+      "verified": true,
+      "note": "Dipendente Ilva appena assunto a tempo indeterminato (l'Unità); la gru era della ditta d'appalto Cemit. Età 24 confermata dalla cronaca della sentenza di primo grado (rassegna Contropiano, ottobre 2008); un articolo di Liberazione/Corriere del Giorno del 2007 lo dà 25enne. Condanne definitive nel 2013 (Il Fatto 2024)."
+    },
+    {
+      "name": "Pasquale D'Ettorre",
+      "age": 27,
+      "death_date": "2003-06-12",
+      "accident_date": null,
+      "area": "Parchi minerali",
+      "contractor": false,
+      "circumstances": "Crollo del braccio di una gru della ditta Cemit",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["l'Unità, 13/06/2003", "https://archivio.unita.news/assets/main/2003/06/13/page_011.pdf"],
+        ["La Repubblica, 13/06/2008 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Il Fatto Quotidiano, 22/02/2024", "https://www.ilfattoquotidiano.it/in-edicola/articoli/2024/02/22/ilva-condannato-per-i-morti-in-fabbrica-il-neo-commissario/7454707/"]
+      ],
+      "verified": true,
+      "note": "Stesso incidente di Paolo Franco. Età 27 dalla cronaca della sentenza (2008); un articolo del 2007 lo dà 28enne. Era a terra, Franco sul braccio della gru (l'Unità)."
+    },
+    {
+      "name": "Saverio Paracolli",
+      "age": 45,
+      "death_date": "2004-04-10",
+      "accident_date": null,
+      "area": "Tubificio 1",
+      "contractor": false,
+      "circumstances": "Colpito da un tubo sbalzato dalla cianfrinatrice; morto dopo sette giorni",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["La Repubblica, 29/05/2004 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Nuova Unità, 15/09/2005 (bollettino operai, in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"]
+      ],
+      "verified": true,
+      "note": "Repubblica 2004 conferma nome e morte 'nel periodo pasquale' (Pasqua 11/04/2004), il bollettino operaio 'aprile, TUB 1'. Il giorno esatto (10/04) e l'età 45 risultano solo da Il Fatto: Liberazione/Corriere del Giorno 2007 lo chiama 'Silvio Paracolli, 38 anni' (probabile errore). ditta=false è dedotto da 'un operaio' Ilva in Repubblica, non esplicito."
+    },
+    {
+      "name": "Silvio Murri",
+      "age": 38,
+      "death_date": "2004-05-30",
+      "accident_date": "2004-05-21",
+      "area": "Acciaieria 1",
+      "contractor": false,
+      "circumstances": "Crollo del ponteggio su cui lavorava; morto dopo nove giorni di coma",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["La Repubblica, 29/05/2004 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Gazzetta del Mezzogiorno, 24/11/2007 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Corriere del Mezzogiorno, 23/12/2008 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"]
+      ],
+      "verified": true,
+      "note": "Discrepanza: il 21/05/2004 è la data dell'incidente, non della morte. Nove giorni di coma (vedova, Gazzetta 2007; sentenza, Corriere del Mezzogiorno 2008); il bollettino operaio indica 'muore il 30 maggio', funerali il 31/05/2004. Assunto in Ilva il 22/12/2003. Repubblica 2004 lo dà 40enne; vedova e sentenza dicono 38. Organi donati."
+    },
+    {
+      "name": "Gianluigi (Luigi) Di Leo",
+      "age": 25,
+      "death_date": "2005-09-09",
+      "accident_date": null,
+      "area": "Deposito bramme 1",
+      "contractor": null,
+      "circumstances": "Colpito da una trave caduta dopo lo scontro tra due carriponte",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["La Repubblica, 09/09/2005 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Corriere del Mezzogiorno (A. Leogrande), 26/04/2008", "https://www.peacelink.it/tarantosociale/a/25951.html"]
+      ],
+      "verified": true,
+      "note": "Le fonti del 2005-2008 lo chiamano 'Luigi Di Leo'; Il Fatto 'Gianluigi'. Probabilmente lo stesso nome (Gianluigi abbreviato), ma da verificare quale usare. Aveva finito il turno e andava a timbrare. Rapporto di lavoro (diretto o ditta) non esplicito nelle fonti lette."
+    },
+    {
+      "name": "Giovanni Satta",
+      "age": 47,
+      "death_date": "2005-09-27",
+      "accident_date": null,
+      "area": "Agglomerato 1 (impianto dismesso in demolizione)",
+      "contractor": true,
+      "circumstances": "Travolto dal crollo di parte dell'impianto durante la demolizione",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Il Manifesto, 28/10/2005 (data come indicata nella rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Corriere del Mezzogiorno (A. Leogrande), 26/04/2008", "https://www.peacelink.it/tarantosociale/a/25951.html"]
+      ],
+      "verified": false,
+      "note": "Nome, età, ditta (Se.pi., Genova, ditta 'trasfertista') e area confermati dal Manifesto. Il mese però non torna: il Manifesto scrive 'ieri' con data 28/10/2005, quindi il 27/10/2005, e aggiunge 'l'ultimo mortale risale a metà settembre'. La data del dossier può essere sbagliata (in un altro articolo della stessa rassegna lo è), ma il 27 settembre di Il Fatto resta senza conferma indipendente. Serve la cronaca originale (Gazzetta o Manifesto, settembre-ottobre 2005)."
+    },
+    {
+      "name": "Luciano Di Natale",
+      "age": 55,
+      "death_date": "2006-09-25",
+      "accident_date": null,
+      "area": "Nastro trasportatore del carbone, dal parco minerale alla cokeria",
+      "contractor": true,
+      "circumstances": "Titolare di ditta appaltatrice, impigliato e schiacciato in un nastro trasportatore",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Gazzetta del Mezzogiorno, data non leggibile (2006)", "https://www.lagazzettadelmezzogiorno.it/news/home/53776/ennesimo-lavoratore-muore-all-ilva.html"]
+      ],
+      "verified": false,
+      "note": "L'articolo della Gazzetta 'Ennesimo lavoratore muore all'Ilva' descrive la stessa dinamica (verso le 18, scendendo da una scaletta metallica sul nastro del carbone; originario della Campania, residente a Taranto). La pagina però non si apre tramite WebFetch, quindi non ho potuto leggere né la data né il nome. Da riaprire nel browser."
+    },
+    {
+      "name": "Andrea D'Alessano",
+      "age": 19,
+      "death_date": "2007-06-09",
+      "accident_date": "2007-06-02",
+      "area": "Altoforno 4, vicino all'ascensore",
+      "contractor": true,
+      "circumstances": "Colpito alla testa da un martello caduto dall'alto; morto dopo una settimana di coma",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Punto FIOM, 11/06/2007 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"]
+      ],
+      "verified": true,
+      "note": "Discrepanza: il 02/06/2007 è la data dell'incidente. La FIOM (11/06/2007) scrive che è morto 'nella giornata di sabato' dopo una settimana di coma, quindi sabato 09/06/2007. Ditta d'appalto Modomec."
+    },
+    {
+      "name": "Domenico Occhinegro",
+      "age": 26,
+      "death_date": "2007-07-31",
+      "accident_date": null,
+      "area": "Tubificio 2",
+      "contractor": false,
+      "circumstances": "Colpito e schiacciato da un grosso tubo durante la lavorazione",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Il Meridiano, 02/08/2007 (ripreso da PeaceLink)", "https://www.peacelink.it/tarantosociale/a/22718.html"],
+        ["Gazzetta del Mezzogiorno, 03/08/2007 (ripreso da PeaceLink)", "https://www.peacelink.it/tarantosociale/a/22746.html"],
+        ["Corriere del Giorno, 02/08/2007 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"]
+      ],
+      "verified": true,
+      "note": "Morto 'martedì sera' (31/07/2007), cinque ore dopo il ricovero. Di Palagiano, dipendente Ilva da tre anni. Alcune fonti successive (PeaceLink 2007-2008) scrivono 'il 2 agosto' e un articolo lo dà 25enne: è la data degli articoli, non della morte."
+    },
+    {
+      "name": "Gjoni Arjan",
+      "age": 47,
+      "death_date": "2008-04-22",
+      "accident_date": null,
+      "area": "Nuovo impianto di zincatura / Laminatoio a freddo",
+      "contractor": true,
+      "circumstances": "Precipitato da una passerella oltre i 15 metri montando strutture metalliche",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Corriere della Sera, 23/04/2008 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Corriere del Giorno, 23/04/2008 (ripreso da PeaceLink)", "https://www.peacelink.it/tarantosociale/a/25900.html"]
+      ],
+      "verified": true,
+      "note": "Albanese, ditta Pedretti (Ponteggi), subappaltatrice della Semat di Brescia. Caduto martedì 22/04 dopo le 19, morto in serata in ospedale. Grafie diverse: Gjoni Arjan / Gjoni Arian / Gjioni Arjian. Il cognome è probabilmente Gjoni. Area incerta (zincatura a caldo per il Corriere del Giorno, Laf per il sindacato); altezza 15 m o 'oltre 20 m'. Cintura di sicurezza sganciata; secondo colleghi era sul ponteggio da 12 ore."
+    },
+    {
+      "name": "Antonio Alagni",
+      "age": 45,
+      "death_date": "2008-07-01",
+      "accident_date": null,
+      "area": "Acciaieria 1",
+      "contractor": true,
+      "circumstances": "Colpito alla testa dal bozzello di una gru, staccatosi per la rottura delle funi",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["La Repubblica, 01/07/2008 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"]
+      ],
+      "verified": true,
+      "note": "Di Casoria, ditta d'appalto P&P (manutenzione). Il Fatto non dice che era di una ditta. Morto nel pomeriggio movimentando lastre d'acciaio di 15 m; l'area Acciaieria 1 è dedotta dallo sciopero immediato di quel reparto. La data è quella dell'articolo di Repubblica, che racconta i fatti della giornata."
+    },
+    {
+      "name": "Zygmunt Paurowicz",
+      "age": 54,
+      "death_date": "2008-12-11",
+      "accident_date": null,
+      "area": "Altoforno 4 (fermo per rifacimento)",
+      "contractor": true,
+      "circumstances": "Colpito da un pezzo appeso a una gru, precipitato da circa 15 metri",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Slai Cobas, comunicato, 11/12/2008 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Conquiste del Lavoro, dicembre 2008 (rassegna ADAPT)", "https://www.bollettinoadapt.it/old/site/home/rassegna-stampa/363CONQUISTE_08_12_.pdf"],
+        ["Sky TG24, 30/10/2012 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"]
+      ],
+      "verified": true,
+      "note": "Polacco, ditta Pirson Montaggio (gruppo francese Pirson), subappalto da Paul Wurth Italia. Morto verso l'1:30 dell'11/12/2008 smontando parti dell'altoforno; era l'ultimo giorno del cantiere. Grafia: 'Paurowicz' (Conquiste del Lavoro), 'Paurovic Zigmontian' (Slai Cobas), 'Paurovvicz' (Il Fatto). Consiglio 'Zygmunt Paurowicz'."
+    },
+    {
+      "name": "Claudio Marsella",
+      "age": 29,
+      "death_date": "2012-10-30",
+      "accident_date": null,
+      "area": "Movimento ferroviario (MOF)",
+      "contractor": false,
+      "circumstances": "Schiacciato tra i respingenti di locomotore e vagone durante l'aggancio",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Sky TG24, 30/10/2012 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Blitz Quotidiano, 30/10/2012", "https://archivio.blitzquotidiano.it/cronaca-italia/claudio-marsella-ilva-taranto-morte-lavoro-1381186"],
+        ["Il Post, 12/01/2013", "https://www.ilpost.it/2013/01/12/lorologio-dellilva/"]
+      ],
+      "verified": true,
+      "note": "Operaio Ilva del reparto movimento ferroviario. Secondo l'USB i manovratori lavoravano da soli con i nuovi protocolli."
+    },
+    {
+      "name": "Francesco Zaccaria",
+      "age": 29,
+      "death_date": "2012-11-28",
+      "accident_date": null,
+      "area": "Area portuale / impianti marittimi",
+      "contractor": false,
+      "circumstances": "Gru abbattuta da una tromba d'aria, caduta in mare con lui in cabina",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["LaPresse, 29/11/2012", "https://www.lapresse.it/cronaca/2012/11/29/maltempo-riprese-a-taranto-ricerche-operaio-ilva-disperso-in-mare/"],
+        ["Il Post, 12/01/2013", "https://www.ilpost.it/2013/01/12/lorologio-dellilva/"]
+      ],
+      "verified": true,
+      "note": "Gruista Ilva di 29 anni (Il Post); Il Fatto non dà l'età. Corpo recuperato il 01/12/2012, tre giorni dopo (Il Post). Un articolo di Domani dice il giorno dopo. Data di morte = giorno del tornado."
+    },
+    {
+      "name": "Ciro Moccia",
+      "age": 42,
+      "death_date": "2013-02-28",
+      "accident_date": null,
+      "area": "Cokeria, batteria 9",
+      "contractor": false,
+      "circumstances": "Precipitato per circa 10 metri dal crollo di una passerella/ponteggio",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Libero, 28/02/2013", "https://www.liberoquotidiano.it/news/italia/21011009/crolla-un-ponteggio-all-ilva--muore-un-operaio--un-ferito-grave/"],
+        ["Il Post, 01/03/2013", "https://www.ilpost.it/2013/03/01/ilva-taranto-incidenti-sul-lavoro/"]
+      ],
+      "verified": true,
+      "note": "Manutentore meccanico, dipendente Ilva. Le cronache del 2013 lo danno 42enne; Il Fatto e un articolo sul processo dicono 43. Ferito Antonio Liddi (46, ditta Md/Emmerre), la cui caduta fu attutita dal corpo del collega."
+    },
+    {
+      "name": "Angelo Iodice",
+      "age": 54,
+      "death_date": "2014-09-04",
+      "accident_date": null,
+      "area": "Acciaieria 1",
+      "contractor": true,
+      "circumstances": "Investito sui binari da un mezzo in retromarcia durante una manutenzione",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Blitz Quotidiano, 04/09/2014", "https://archivio.blitzquotidiano.it/cronaca-italia/angelo-iodice-muore-investito-allilva-sindacati-proclamano-sciopero-1963994"],
+        ["Fiscal Focus, 04/09/2014", "https://www.fiscal-focus.it/news-24/16-10-morto-operaio-all-ilva-di-taranto-i-sindacati-24-ore-di-sciopero,3,63276"]
+      ],
+      "verified": true,
+      "note": "Dipendente della ditta Global Service, del Casertano. Una fonte lo indica come responsabile della sicurezza della ditta. L'area era interessata da uno sversamento di ghisa nei giorni precedenti."
+    },
+    {
+      "name": "Alessandro Morricella",
+      "age": 35,
+      "death_date": "2015-06-12",
+      "accident_date": "2015-06-08",
+      "area": "Altoforno 2",
+      "contractor": false,
+      "circumstances": "Investito da ghisa incandescente misurando la temperatura al foro di colata",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Fanpage, 12/06/2015", "https://www.fanpage.it/ilva-morto-dopo-4-giorni-d-agonia-l-operaio-investito-dalla-ghisa-incandescente/"],
+        ["Blitz Quotidiano, 12/06/2015", "https://archivio.blitzquotidiano.it/cronaca-italia/ilva-alessandro-morricella-morto-per-ustioni-investito-da-ghisa-incandescente-2209522"],
+        ["AGI, 29/02/2024", "https://www.agi.it/cronaca/news/2024-02-29/condannati-dirigenti-ex-ilva-morte-operaio-taranto-25507653/"]
+      ],
+      "verified": true,
+      "note": "Dipendente Ilva. Ustioni sul 90% del corpo. Afo2 sequestrato. Condanne in primo grado nel febbraio 2024 (Cola 6 anni; Vitale e Rizzo 5). Un articolo di Domani lo dà 34enne."
+    },
+    {
+      "name": "Cosimo Martucci",
+      "age": 49,
+      "death_date": "2015-11-17",
+      "accident_date": null,
+      "area": "Agglomerato",
+      "contractor": true,
+      "circumstances": "Schiacciato da un grosso tubo imbracato, caricandolo su un camion",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Affaritaliani, 17/11/2015", "https://www.affaritaliani.it/puglia/ilva-tubo-di-ghisa-fatale-br-muore-cosimo-martucci-393292.html"],
+        ["L'Adige, 17/11/2015", "https://www.ladige.it/attualita/ilva-operaio-muore-schiacciato-da-un-tubo-iyb3qazf"],
+        ["Blitz Quotidiano, 17/11/2015", "https://archivio.blitzquotidiano.it/cronaca-italia/ilva-cosimo-martucci-morto-schiacciato-da-un-grosso-tubo-2322109"]
+      ],
+      "verified": true,
+      "note": "Il Fatto non dà l'età: 49 anni (Affaritaliani, Fanpage). Ditta d'appalto Pitrelli. Lavori di smontaggio di una canna fumaria; tubo di ghisa o d'acciaio secondo le fonti."
+    },
+    {
+      "name": "Giacomo Campo",
+      "age": 25,
+      "death_date": "2016-09-17",
+      "accident_date": null,
+      "area": "Altoforno 4, nastro trasportatore",
+      "contractor": true,
+      "circumstances": "Schiacciato da un rullo caduto per il cedimento di un contrappeso",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Fanpage, 17/09/2016", "https://www.fanpage.it/attualita/ilva-taranto-operaio-muore-stritolato-da-un-rullo-sindacati-e-un-omicidio/"],
+        ["Il Fatto Quotidiano, 17/09/2016", "https://www.ilfattoquotidiano.it/2016/09/17/ilva-mattarella-morte-sul-lavoro-ferisce-litalia-inammissibile-che-non-ci-siano-garanzie-emiliano-rabbia-incontenibile/3039701/"],
+        ["L'Espresso, 14/11/2026", "https://www.lespresso.it/c/attualita/2026/11/14/giacomo-campo-operaio-ex-ilva-morto-stele-memoria/65844"]
+      ],
+      "verified": true,
+      "note": "Di Roccaforzata, ditta d'appalto Steel Service. Il nastro era fermo per una riparazione. Età 24, 25 o 26 a seconda della fonte; 25 è la più frequente. Processo ancora in primo grado a novembre 2026 (L'Espresso)."
+    },
+    {
+      "name": "Angelo Fuggiano",
+      "age": 28,
+      "death_date": "2018-05-17",
+      "accident_date": null,
+      "area": "Porto, quarto sporgente (reparto Ima), gru DM6",
+      "contractor": true,
+      "circumstances": "Colpito da una fune d'acciaio durante la sostituzione delle funi di una gru",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Il Post, 17/05/2018", "https://www.ilpost.it/2018/05/17/operaio-ilva-taranto-incidente-sul-lavoro-morto/"],
+        ["Il Fatto Quotidiano, 17/05/2018", "https://www.ilfattoquotidiano.it/2018/05/17/ilva-operaio-28enne-muore-travolto-da-una-fune-taranto-sciopero-immediato-dei-lavoratori-fino-venerdi-mattina/4361814/"],
+        ["AGI, 21/05/2018", "https://www.agi.it/economia/ilva_crisi_chiusura_contratto_governo-3926211/news/2018-05-21/"]
+      ],
+      "verified": true,
+      "note": "Ditta d'appalto Ferplast. La nota Ilva parla dell'urto con una carrucola, altre ricostruzioni di una fune d'acciaio saltata. Sei indagati, tra cui il titolare Ferplast e il direttore Ruggero Cola."
+    },
+    {
+      "name": "Cosimo (Mimmo) Massaro",
+      "age": 40,
+      "death_date": "2019-07-10",
+      "accident_date": null,
+      "area": "Porto, molo Sant'Eligio, gru DM5",
+      "contractor": false,
+      "circumstances": "Gru spezzata da una tromba d'aria, caduto in mare con la cabina",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Dire, 11/07/2019", "https://www.dire.it/11-07-2019/352221-maltempo-fa-cadere-gru-allex-ilva-operaio-disperso-da-ieri-sera-proclamato-sciopero-a-oltranza/"],
+        ["Open, 13/07/2019", "https://www.open.online/2019/07/13/recuperato-il-corpo-delloperaio-ex-ilva-di-maio-solidarieta-alla-famiglia/"],
+        ["ANSA, 15/07/2019", "https://www.ansa.it/english/news/2019/07/15/8-probed-for-death-of-a.mittal-crane-operator_3856b3ec-83e1-4f10-aaa5-c7c8e472f0dc.html"]
+      ],
+      "verified": true,
+      "note": "Gruista ArcelorMittal, di Fragagnano. Incidente mercoledì 10/07/2019 in serata; corpo recuperato dai sommozzatori il 13/07 a sei metri di profondità. La data di morte è quella dell'incidente. Età 40 nella maggior parte delle fonti (una dice 42). Il Manifesto (Revelli, 17/11/2019) scrive per errore '10 agosto 2019'. Otto indagati."
+    },
+    {
+      "name": "Francesco Tomai",
+      "age": 38,
+      "death_date": "2021-02-26",
+      "accident_date": null,
+      "area": "Reparto Trh-Afo, spogliatoio",
+      "contractor": false,
+      "circumstances": "Malore fatale nello spogliatoio dopo aver timbrato, prima del turno",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["USB Puglia, comunicato, 28/02/2021", "https://puglia.usb.it/leggi-notizia/francesco-tomai-stroncato-da-un-malore-in-arcelormittal-un-ragazzo-perbene-e-dal-cuore-grande-1200.pdf"]
+      ],
+      "verified": true,
+      "note": "Nome, data ed età confermati dall'USB. Non è un infortunio in senso stretto: è un malore, e non ho trovato autopsia, indagini o riconoscimento Inail come infortunio. Valutare se includerlo o metterlo a parte."
+    },
+    {
+      "name": "Claudio Salamida",
+      "age": 47,
+      "death_date": "2026-01-12",
+      "accident_date": null,
+      "area": "Acciaieria 2",
+      "contractor": false,
+      "circumstances": "Precipitato dal quinto al quarto piano per il cedimento di un grigliato",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["Open, 12/01/2026", "https://www.open.online/2026/01/12/ex-ilva-precipita-operaio-impianto-taranto-morto/"],
+        ["LaPresse, 12/01/2026", "https://www.lapresse.it/economia/2026/01/12/ex-ilva-muore-operaio-a-taranto-i-sindacati-proclamano-sciopero-immediato/"],
+        ["Domani, 2026", "https://www.editorialedomani.it/fatti/ilva-morte-operaio-claudio-salamida-17-indagati-omicidio-colposo-concorso-manutenzione-sotto-accusa-testimonianze-m47cjz8b"]
+      ],
+      "verified": true,
+      "note": "Dipendente di Acciaierie d'Italia in AS, controllava delle valvole. Età: Open e altre agenzie dicono 47, Il Fatto e Wikipedia 46. Ho messo 47 come da cronaca del giorno, ma è un punto da sciogliere. Originario di Alberobello, residente a Putignano (Open, 14/01). 17 indagati."
+    },
+    {
+      "name": "Loris Costantino",
+      "age": 36,
+      "death_date": "2026-03-02",
+      "accident_date": null,
+      "area": "Agglomerato",
+      "contractor": true,
+      "circumstances": "Precipitato nel vuoto per il cedimento di un grigliato, pulendo un nastro",
+      "sources": [
+        ["Il Fatto Quotidiano, 02/03/2026", "https://www.ilfattoquotidiano.it/2026/03/02/ex-ilva-morti-lavoro-taranto-notizie/8311102/"],
+        ["LaPresse, 02/03/2026", "https://www.lapresse.it/cronaca/2026/03/02/ex-ilva-precipita-da-quasi-20-metri-morto-operaio/"],
+        ["ANSA, 02/03/2026", "https://www.ansa.it/sito/notizie/economia/2026/03/02/morto-loperaio.-ex-ilva-profondo-cordoglio-verifiche-in-corso_57abb8d6-d5a7-4f08-b2b1-86064d5e9842.html"],
+        ["L'Adige, 04/03/2026", "https://www.ladige.it/attualita/dieci-indagati-per-omicidio-colposo-per-loperaio-morto-allex-ilva-upd0llb9"]
+      ],
+      "verified": true,
+      "note": "Addetto alle pulizie della ditta d'appalto Gea Power. Incidente la mattina del 02/03/2026, morto poco dopo l'arrivo al SS. Annunziata (LaPresse, ore 10:57), quindi 2 marzo, non 1. Altezza 10, 12 o quasi 20 metri a seconda della fonte. Le prime agenzie lo davano 26enne, poi corretto in 36. Dieci indagati (4 Gea Power, 6 Acciaierie d'Italia)."
+    }
+  ],
+  "missing": [
+    {
+      "name": "Antonio (Antonino) Mingolla",
+      "age": 47,
+      "death_date": "2006-04-18",
+      "accident_date": null,
+      "area": "Conduttura del gas dell'Altoforno 1",
+      "contractor": true,
+      "circumstances": "Intossicato dal gas durante la manutenzione di una conduttura; due colleghi feriti",
+      "sources": [
+        ["PuntoSicuro, 20/04/2006", "https://www.puntosicuro.it/industria-siderurgica-lavorazione-metalli-C-19/infortuni-dalle-cause-inspiegabili-AR-6001/"],
+        ["Gazzetta del Mezzogiorno, aprile 2006 (data non leggibile)", "https://www.lagazzettadelmezzogiorno.it/news/puglia/47724/taranto-un-morto-e-due-feriti-all-ilva.html"],
+        ["Slai Cobas, 23/12/2008 (in rassegna Contropiano)", "https://contropiano.org/img/2012/11/morti-feriti-ilva.pdf"],
+        ["Siderlandia, 23/04/2012", "http://www.siderlandia.it/1/?p=4390"],
+        ["Corriere del Mezzogiorno (A. Leogrande), 26/04/2008", "https://www.peacelink.it/tarantosociale/a/25951.html"]
+      ],
+      "verified": true,
+      "note": "Assente dalla lista di Il Fatto e da Wikipedia. Di Mesagne, ditta d'appalto Cmt (subappalto Smi sas). Data 18/04/2006 secondo Slai Cobas e Siderlandia; PuntoSicuro del 20/04 scrive 'ieri' (forse ripresa con un giorno di ritardo). 'Antonio' nella cronaca 2006, 'Antonino' nelle fonti successive e nella sentenza d'appello. Condanne in appello per tecnici Ilva e Cmt (Gazzetta, 'sei condanne in appello'). Età e paese dalla Gazzetta, letta solo tramite riassunto di ricerca."
+    },
+    {
+      "name": "Vito Antonio Rafanelli",
+      "age": 33,
+      "death_date": "2006-08-22",
+      "accident_date": "2006-08-17",
+      "area": "Tubificio, TUL/2 (cianfrinatrice)",
+      "contractor": false,
+      "circumstances": "Investito da un tubo spinto dai rulli mentre sbloccava la cianfrinatrice",
+      "sources": [
+        ["Tribunale di Taranto, sez. 2, sentenza 13/08/2012", "https://olympus.uniurb.it/index.php?option=com_content&view=article&id=15428%3Atribunale-di-taranto-sez-2-13-agosto-2012-infortunio-mortale-con-la-macchina-qcianfrinatriceq-e-varie-omissioni-in-materia-di-sicurezza&catid=226&Itemid=138"],
+        ["Siderlandia, 23/04/2012", "http://www.siderlandia.it/1/?p=4390"],
+        ["Il Manifesto, 24/11/2006 (datato 2004 nella rassegna, ma il testo è del 2006)", "https://www.peacelink.it/tarantosociale/a/19536.html"],
+        ["Gazzetta del Mezzogiorno, sentenza di primo grado (data non leggibile)", "https://www.lagazzettadelmezzogiorno.it/news/home/356041/morte-di-un-operaio-ilva-3-condanne-e-un-assoluzione.html"]
+      ],
+      "verified": true,
+      "note": "Assente dalla lista di Il Fatto, presente su Wikipedia it. La sentenza (vittima 'R.V.A.', dipendente Ilva dell'area tubifici) fissa incidente il 17/08/2006 e morte il 22/08/2006. Il Manifesto (Cartosio) cita la morte di agosto al Tubificio 2 con la cianfrinatrice. Lo stesso articolo è datato 24/11/2004 nella rassegna e su PeaceLink, ma cita dati Inail 2005 e Vendola governatore, quindi è del 2006. Età 33 solo da Wikipedia. In primo grado 3 condanne e 1 assoluzione; Buonasera24 riporta assoluzione di tutti in appello."
+    }
+  ],
+  "gentile": {
+    "name": "Giovanni Gentile",
+    "age": 23,
+    "death_date": "1961-08-01",
+    "accident_date": null,
+    "area": "Cantiere del IV Centro siderurgico Italsider (fabbrica in costruzione)",
+    "contractor": false,
+    "circumstances": "Colpito da traversine ferroviarie cadute da un camion",
+    "sources": [
+      ["A. De Palma, 'In nome del profitto', Il de Martino n. 22-23, 12/2013 (blog SMS de Martino, 20/11/2013)", "https://smsdemartino.wordpress.com/2013/11/20/in-nome-del-profitto-taranto-e-la-sua-fabbrica/"],
+      ["Il Manifesto (M. Revelli), 17/11/2019 (PDF PeaceLink)", "https://www.peacelink.it/ecologia/docs/5316.pdf"]
+    ],
+    "verified": true,
+    "note": "Revelli conferma nome e data: 'dal primo, Giovanni Gentile, il 1° agosto del '61 quando la fabbrica era ancora in costruzione'. Non riporta età, qualifica né dinamica, e quasi certamente riprende De Palma, quindi non è una fonte del tutto indipendente. Età 23, dipendente diretto Italsider e traversine vengono solo dal libro De Palma: il testo online del blog dice soltanto 'Il primo di cui parlano le cronache fu Giovanni Gentile, morto il primo agosto del 1961'. Non ho trovato cronaca d'epoca (l'archivio dell'Unità non era raggiungibile)."
+  },
+  "year_1964": {
+    "source": [
+      ["A. De Palma, 'In nome del profitto', Il de Martino n. 22-23, 12/2013", "https://smsdemartino.wordpress.com/2013/11/20/in-nome-del-profitto-taranto-e-la-sua-fabbrica/"],
+      ["A. Leogrande, Corriere del Mezzogiorno, 09/01/2009, cita R. Nistri, 'Anni '60: la belle époque dell'acciaio', in Taranto. Dagli ulivi agli altiforni, vol. 2, Mandese 2009", "https://www.peacelink.it/tarantosociale/a/28285.html"]
+    ],
+    "note": "De Palma: 'Nel 1964, anno in cui si compì il grande sforzo per l'apertura di molti reparti, i morti furono 20, quasi tutti delle ditte appaltatrici'. Nistri, citato da Leogrande, dà cifre diverse: 18 morti nel 1961, 28 nel 1962, 23 nel 1963, 32 nel 1964, 'specie tra le ditte dell'appalto'. La cifra 20 non ha quindi una seconda fonte, e una fonte indipendente ne dà 32. Meglio scrivere 'tra 20 e 32' citando entrambe, oppure usare la serie Nistri. Wikipedia it riporta 386 morti nel periodo 1960-1977."
+  }
+}

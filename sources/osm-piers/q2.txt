@@ -1,0 +1,8 @@
+[out:json][timeout:90];
+(
+  way["natural"="coastline"](40.455,17.13,40.50,17.215);
+  node["name"~"[Ss]porgente|[Cc]alata|[Cc]oils|[Mm]olo"](40.455,17.13,40.50,17.215);
+  node["seamark:name"](40.455,17.13,40.50,17.215);
+  way["seamark:type"~"harbour|berth"](40.455,17.13,40.50,17.215);
+);
+out tags geom;

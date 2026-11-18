@@ -1,0 +1,922 @@
+[
+{
+"code": "E340",
+"h": 20,
+"process": "bricchettazione residui",
+"lon": 17.206305,
+"lat": 40.497052,
+"since": 1965
+},
+{
+"code": "E731",
+"h": 14,
+"process": "asciugatura lamiere",
+"lon": 17.199443,
+"lat": 40.498692,
+"since": 1965
+},
+{
+"code": "E733",
+"h": 14,
+"process": "preparazione primer",
+"lon": 17.199282,
+"lat": 40.498757,
+"since": 1965
+},
+{
+"code": "E101",
+"h": 30,
+"process": "stock-house AFO1",
+"lon": 17.208463,
+"lat": 40.498812,
+"since": 1965
+},
+{
+"code": "E105?",
+"h": 30,
+"process": "stock-house AFO3",
+"lon": 17.213741,
+"lat": 40.498849,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.209134,
+"lat": 40.499018,
+"since": 1965
+},
+{
+"code": "E103",
+"h": 30,
+"process": "stock-house AFO2",
+"lon": 17.209601,
+"lat": 40.49936,
+"since": 1965
+},
+{
+"code": "E400",
+"h": 54,
+"process": "caricamento fossili in sili",
+"lon": 17.214798,
+"lat": 40.499436,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.211562,
+"lat": 40.499682,
+"since": 1965
+},
+{
+"code": "E104",
+"h": 30,
+"process": "stock-house AFO2-AFO3",
+"lon": 17.210565,
+"lat": 40.499739,
+"since": 1965
+},
+{
+"code": "E422",
+"h": 100,
+"process": "cokefazione batterie 3-4",
+"lon": 17.21283,
+"lat": 40.499736,
+"since": 1965
+},
+{
+"code": "E401",
+"h": 30,
+"process": "frantumazione primaria fossile",
+"lon": 17.215886,
+"lat": 40.499952,
+"since": 1965
+},
+{
+"code": "E106?",
+"h": 35,
+"process": "stock-house AFO4",
+"lon": 17.21106,
+"lat": 40.500132,
+"since": 1975
+},
+{
+"code": "E108",
+"h": 36,
+"process": "stock-house AFO5",
+"lon": 17.216548,
+"lat": 40.500087,
+"since": 1975
+},
+{
+"code": "E427",
+"h": 65,
+"process": "trattamento gas coke",
+"lon": 17.214579,
+"lat": 40.500273,
+"since": 1965
+},
+{
+"code": "E423",
+"h": 100,
+"process": "cokefazione batterie 5-6",
+"lon": 17.214545,
+"lat": 40.500616,
+"since": 1965
+},
+{
+"code": "E134",
+"h": 66,
+"process": "cowper AFO1",
+"lon": 17.208605,
+"lat": 40.500909,
+"since": 1965
+},
+{
+"code": "E431",
+"h": 25,
+"process": "frantumazione e vagliatura coke",
+"lon": 17.213271,
+"lat": 40.501396,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.183484,
+"lat": 40.502506,
+"since": 1965
+},
+{
+"code": "E135",
+"h": 64,
+"process": "cowper AFO2",
+"lon": 17.210164,
+"lat": 40.5017,
+"since": 1965
+},
+{
+"code": "E111",
+"h": 35,
+"process": "campo di colata AFO1",
+"lon": 17.208764,
+"lat": 40.501768,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.20721,
+"lat": 40.501835,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.206858,
+"lat": 40.502052,
+"since": 1965
+},
+{
+"code": "E424",
+"h": 125,
+"process": "cokefazione batterie 7-8",
+"lon": 17.217138,
+"lat": 40.501958,
+"since": 1965
+},
+{
+"code": "E112",
+"h": 25,
+"process": "campo di colata AFO2",
+"lon": 17.209525,
+"lat": 40.502306,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.206583,
+"lat": 40.502403,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.202516,
+"lat": 40.502529,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.206489,
+"lat": 40.502424,
+"since": 1965
+},
+{
+"code": "E136",
+"h": 65,
+"process": "cowper AFO3",
+"lon": 17.21134,
+"lat": 40.502324,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.206203,
+"lat": 40.50249,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.206109,
+"lat": 40.502517,
+"since": 1965
+},
+{
+"code": "E113",
+"h": 25,
+"process": "campo di colata AFO3",
+"lon": 17.210134,
+"lat": 40.502602,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.205045,
+"lat": 40.502916,
+"since": 1965
+},
+{
+"code": "E528/2",
+"h": 49,
+"process": "degasatori acciaieria 1",
+"lon": 17.207727,
+"lat": 40.503089,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.207302,
+"lat": 40.503214,
+"since": 1965
+},
+{
+"code": "E528/1",
+"h": 49,
+"process": "degasatori acciaieria 1",
+"lon": 17.207792,
+"lat": 40.503222,
+"since": 1965
+},
+{
+"code": "E567/1",
+"h": 15,
+"process": "vapore acciaieria 1",
+"lon": 17.208839,
+"lat": 40.503248,
+"since": 1965
+},
+{
+"code": "E530",
+"h": 7,
+"process": "ferroleghe acciaieria 1",
+"lon": 17.206902,
+"lat": 40.503452,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.206848,
+"lat": 40.503529,
+"since": 1965
+},
+{
+"code": "E167",
+"h": 44,
+"process": "trasporto fossile PCI",
+"lon": 17.210728,
+"lat": 40.503503,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.211628,
+"lat": 40.504241,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.211862,
+"lat": 40.504274,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.212087,
+"lat": 40.50424,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.211977,
+"lat": 40.504331,
+"since": 1965
+},
+{
+"code": "E161",
+"h": 44,
+"process": "stoccaggio fossile PCI",
+"lon": 17.212084,
+"lat": 40.504399,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204889,
+"lat": 40.504598,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.203981,
+"lat": 40.504646,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.212146,
+"lat": 40.504471,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204016,
+"lat": 40.504774,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.20406,
+"lat": 40.504866,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.202622,
+"lat": 40.504997,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.20246,
+"lat": 40.505038,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.202287,
+"lat": 40.50508,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204306,
+"lat": 40.505216,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204338,
+"lat": 40.505344,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.205593,
+"lat": 40.505371,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204398,
+"lat": 40.505485,
+"since": 1965
+},
+{
+"code": "E114",
+"h": 35,
+"process": "campo di colata AFO4",
+"lon": 17.214916,
+"lat": 40.50531,
+"since": 1975
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204512,
+"lat": 40.505661,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.208966,
+"lat": 40.505531,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.209112,
+"lat": 40.50585,
+"since": 1965
+},
+{
+"code": "E137",
+"h": 66,
+"process": "cowper AFO4",
+"lon": 17.213341,
+"lat": 40.505839,
+"since": 1975
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.218544,
+"lat": 40.505939,
+"since": 1965
+},
+{
+"code": "E138",
+"h": 71,
+"process": "cowper AFO5",
+"lon": 17.215021,
+"lat": 40.506535,
+"since": 1975
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.20455,
+"lat": 40.506944,
+"since": 1965
+},
+{
+"code": "E115",
+"h": 30,
+"process": "campo di colata AFO5 sud",
+"lon": 17.214531,
+"lat": 40.506702,
+"since": 1975
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204722,
+"lat": 40.507121,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.205019,
+"lat": 40.507266,
+"since": 1965
+},
+{
+"code": "E711",
+"h": 25,
+"process": "oil cellar temper 2",
+"lon": 17.199399,
+"lat": 40.507487,
+"since": 1965
+},
+{
+"code": "E732",
+"h": 14,
+"process": "granigliatura lamiere",
+"lon": 17.198057,
+"lat": 40.507629,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.205437,
+"lat": 40.507457,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204792,
+"lat": 40.50752,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.213972,
+"lat": 40.507299,
+"since": 1965
+},
+{
+"code": "E751",
+"h": 44,
+"process": "pretrattamento nastro",
+"lon": 17.19791,
+"lat": 40.507795,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.206946,
+"lat": 40.50757,
+"since": 1965
+},
+{
+"code": "E116",
+"h": 30,
+"process": "campo di colata AFO5 nord",
+"lon": 17.215843,
+"lat": 40.507338,
+"since": 1975
+},
+{
+"code": "E707",
+"h": 25,
+"process": "treno temper 2",
+"lon": 17.199435,
+"lat": 40.507972,
+"since": 1965
+},
+{
+"code": "E713",
+"h": 28,
+"process": "ricottura nastri",
+"lon": 17.201824,
+"lat": 40.507945,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.200567,
+"lat": 40.508092,
+"since": 1965
+},
+{
+"code": "E740",
+"h": 25,
+"process": "soluzione elettrolitica",
+"lon": 17.200201,
+"lat": 40.508177,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.199946,
+"lat": 40.508235,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.210184,
+"lat": 40.507989,
+"since": 1965
+},
+{
+"code": "E735",
+"h": 25,
+"process": "pretrattamento nastri",
+"lon": 17.198872,
+"lat": 40.508495,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.215693,
+"lat": 40.50801,
+"since": 1965
+},
+{
+"code": "E703",
+"h": 22,
+"process": "oil cellar tandem",
+"lon": 17.201339,
+"lat": 40.508471,
+"since": 1965
+},
+{
+"code": "E324",
+"h": 40,
+"process": "raffreddamento agglomerato D",
+"lon": 17.21913,
+"lat": 40.508295,
+"since": 1965
+},
+{
+"code": "E736",
+"h": 25,
+"process": "elettrodeposizione",
+"lon": 17.198447,
+"lat": 40.50898,
+"since": 1965
+},
+{
+"code": "E737",
+"h": 25,
+"process": "elettrodeposizione",
+"lon": 17.198334,
+"lat": 40.509111,
+"since": 1965
+},
+{
+"code": "E314",
+"h": 35,
+"process": "agglomerazione linea D",
+"lon": 17.219759,
+"lat": 40.508552,
+"since": 1965
+},
+{
+"code": "E738",
+"h": 25,
+"process": "elettrodeposizione",
+"lon": 17.198123,
+"lat": 40.509348,
+"since": 1965
+},
+{
+"code": "E705",
+"h": 22,
+"process": "treno tandem",
+"lon": 17.20119,
+"lat": 40.509308,
+"since": 1965
+},
+{
+"code": "E326",
+"h": 37,
+"process": "calce idrata linea D",
+"lon": 17.219841,
+"lat": 40.508797,
+"since": 1965
+},
+{
+"code": "E325",
+"h": 40,
+"process": "raffreddamento agglomerato E",
+"lon": 17.218548,
+"lat": 40.508944,
+"since": 1965
+},
+{
+"code": "E743",
+"h": 28,
+"process": "satinatura cilindri",
+"lon": 17.199355,
+"lat": 40.50954,
+"since": 1965
+},
+{
+"code": "E315",
+"h": 35,
+"process": "agglomerazione linea E",
+"lon": 17.219175,
+"lat": 40.509196,
+"since": 1965
+},
+{
+"code": "E327",
+"h": 37,
+"process": "calce idrata linea E",
+"lon": 17.219259,
+"lat": 40.509446,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.199119,
+"lat": 40.510184,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.199181,
+"lat": 40.510191,
+"since": 1965
+},
+{
+"code": "E701",
+"h": 20,
+"process": "decapaggio nastri",
+"lon": 17.200633,
+"lat": 40.510319,
+"since": 1965
+},
+{
+"code": "E312",
+"h": 210,
+"process": "agglomerazione linee D-E",
+"lon": 17.221177,
+"lat": 40.509999,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.20688,
+"lat": 40.511017,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.206739,
+"lat": 40.511439,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.204004,
+"lat": 40.512925,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.202582,
+"lat": 40.513688,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.205701,
+"lat": 40.514128,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.20565,
+"lat": 40.514239,
+"since": 1965
+},
+{
+"code": null,
+"h": null,
+"process": null,
+"lon": 17.208275,
+"lat": 40.520649,
+"since": 1965
+},
+{
+"code": "E425",
+"h": 125,
+"process": "cokefazione batterie 9-10",
+"lon": 17.217385,
+"lat": 40.502965,
+"since": 1965
+},
+{
+"code": "E426?",
+"h": 125,
+"process": "cokefazione batteria 11",
+"lon": 17.217893,
+"lat": 40.503992,
+"since": 1965
+},
+{
+"code": "E436",
+"h": 30,
+"process": "sfornamento batterie 7-8",
+"lon": 17.215846,
+"lat": 40.502596,
+"since": 1965
+},
+{
+"code": "E435",
+"h": 30,
+"process": "sfornamento batterie 11-12",
+"lon": 17.215537,
+"lat": 40.5024,
+"since": 1965
+},
+{
+"code": "E418",
+"h": null,
+"process": null,
+"lon": 17.215618,
+"lat": 40.501895,
+"since": 1965
+},
+{
+"code": "E408",
+"h": 24,
+"process": "miscelazione fossile",
+"lon": 17.218018,
+"lat": 40.501477,
+"since": 1965
+},
+{
+"code": "E107",
+"h": 35,
+"process": "stock-house AFO4",
+"lon": 17.216677,
+"lat": 40.504364,
+"since": 1975
+},
+{
+"code": "E108",
+"h": 36,
+"process": "stock-house AFO5",
+"lon": 17.216545,
+"lat": 40.504006,
+"since": 1975
+}
+]

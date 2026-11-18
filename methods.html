@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metodo e fonti · Ex Ilva, Taranto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root { --paper: #f2f3f0; --ink: #1d2225; --muted: #5d6569; --dust: #a3402a; --bar: #1d2225;
+  --sans: 'Archivo', system-ui, sans-serif; --serif: 'Source Serif 4', Georgia, serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--serif); }
+header { background: var(--bar); color: var(--paper); padding: 18px 24px; }
+header a { color: var(--paper); font: 600 14px var(--sans); }
+header h1 { font: 800 28px/1.1 var(--sans); font-stretch: 85%; margin: 6px 0 0; }
+main { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; }
+h2 { font: 700 21px/1.25 var(--sans); margin: 40px 0 8px; }
+h3 { font: 700 16px/1.3 var(--sans); margin: 22px 0 4px; }
+p, li { max-width: 68ch; }
+a { color: var(--ink); }
+.toc { font: 15px/1.8 var(--sans); columns: 2; padding-left: 18px; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.45 var(--sans); margin: 10px 0; }
+th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid #d6d9d4; }
+th { font-weight: 700; color: var(--muted); }
+.source-list { font: 14px/1.5 var(--sans); padding-left: 18px; }
+.source-list li { margin: 3px 0; }
+.source-list .where { color: var(--muted); }
+small, .note { font: 13px/1.5 var(--sans); color: var(--muted); }
+:focus-visible { outline: 3px solid #f0b429; outline-offset: 2px; }
+@media (max-width: 600px) { .toc { columns: 1; } }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html">← Torna alla mappa</a>
+  <h1>Metodo e fonti</h1>
+</header>
+<main>
+<p>Questo sito ricostruisce la storia dello stabilimento siderurgico di Taranto, dal 1955 a oggi, su una mappa che cambia anno per anno. Ogni evento e ogni dato riportato rimanda alla sua fonte. Questa pagina spiega come è costruita la mappa, da dove vengono i numeri e quali criteri sono stati seguiti.</p>
+
+<ol class="toc">
+  <li><a href="#criteria">Criteri</a></li>
+  <li><a href="#map">La mappa</a></li>
+  <li><a href="#plants">Gli impianti in 3D</a></li>
+  <li><a href="#health">Salute</a></li>
+  <li><a href="#air">Qualità dell'aria</a></li>
+  <li><a href="#emissions">Emissioni dello stabilimento</a></li>
+  <li><a href="#production">Produzione di acciaio</a></li>
+  <li><a href="#limits">Limiti della ricostruzione</a></li>
+  <li><a href="#sources">Elenco delle fonti</a></li>
+  <li><a href="#licences">Licenze</a></li>
+</ol>
+
+<h2 id="criteria">Criteri</h2>
+<ul>
+  <li><strong>Ogni affermazione ha una fonte.</strong> Si preferiscono documenti primari: atti giudiziari, provvedimenti, relazioni di ARPA Puglia, ISPRA, Istituto superiore di sanità, Agenzia europea dell'ambiente. Gli articoli di stampa sono usati per la cronaca e sempre citati.</li>
+  <li><strong>Solo dati misurati o contati.</strong> Il sito mostra misure (per esempio le concentrazioni nell'aria o i casi di tumore osservati) e conteggi. Le stime prodotte da modelli statistici, come i decessi attribuibili alle emissioni calcolati nelle perizie e nelle valutazioni sanitarie, sono importanti ma dipendono da ipotesi di calcolo: per questo non sono riportate.</li>
+  <li><strong>Distinguere il dato dalla ricostruzione.</strong> Dove la mappa ricostruisce qualcosa che non è misurato (per esempio un’altezza), le schede lo indicano.</li>
+</ul>
+
+<h2 id="map">La mappa</h2>
+<p>La base è disegnata con i dati di <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a>: costa, mari, strade, il perimetro dello stabilimento (relazione 11843712), i suoi 1.640 edifici e impianti, i 115 km di binari interni e gli edifici della città. Le altezze vengono dal rilievo laser aereo (LiDAR) del Piano straordinario di telerilevamento del Ministero dell’Ambiente, voli del 2008 e del 2010, distribuito con licenza CC BY 4.0 dalla <a href="https://gn.mase.gov.it/portale/distribuzione-dati-pst" target="_blank" rel="noopener">Banca dati PST</a>. L’altezza di ogni edificio è la differenza tra il modello della superficie (DSM) e quello del terreno (DTM), a 1 metro di risoluzione, presa all’85° percentile dei punti interni al poligono. Così sono misurati 1.486 dei 1.640 edifici dello stabilimento e 735 edifici della città, quasi tutti nel quartiere Tamburi; per gli altri l’altezza è ricostruita in base al tipo e alla superficie o ai piani registrati in OpenStreetMap. Come verifica, il rilievo misura il camino E312 a 209,8 m, contro i 210 m dichiarati nell’autorizzazione ambientale.</p>
+<p>La mappa cambia con gli anni: prima del 1960 l'area dello stabilimento è rappresentata come campagna, tra il 1960 e il 1964 come cantiere. Gli altoforni 4 e 5 compaiono dal 1975, con il raddoppio. Le coperture dei parchi minerali compaiono dall'anno in cui sono state completate.</p>
+<p>Le polveri rosse che si muovono dai parchi minerali verso i Tamburi sono un'animazione illustrativa: seguono la direzione dei venti da nord-ovest e la loro quantità segue la produzione, ma non rappresentano una misura.</p>
+
+<h2 id="plants">Gli impianti in 3D</h2>
+<h3>Camini</h3>
+<p>Posizione e sigla dei camini vengono dalla planimetria dei punti di emissione allegata alla domanda di Autorizzazione integrata ambientale del 2011 (<a href="https://va.mite.gov.it/File/Documento/260022" target="_blank" rel="noopener">scheda B.20</a>). L'altezza e l'impianto di provenienza vengono dalla tabella delle fonti di emissione della stessa procedura (<a href="https://va.mite.gov.it/File/Documento/260236" target="_blank" rel="noopener">scheda B.6</a>), che elenca 278 camini. La planimetria è stata allineata alla mappa usando come riferimenti due serbatoi e un gasometro; come controllo indipendente, il camino E312 dell'agglomerazione (210 m) cade a 9 metri dalla sua posizione in OpenStreetMap. Dove il rilievo laser conferma l’altezza dichiarata (entro il 20%), il camino è collocato nel punto esatto misurato dal rilievo. I camini di cui la planimetria non permette di identificare la sigla prendono l’altezza misurata dal rilievo, quando è riconoscibile, altrimenti un valore convenzionale di 30 m.</p>
+<h3>Altoforni</h3>
+<p>I quattro altoforni sono stati individuati sulla cartografia e numerati abbinando a ciascuno i camini dei suoi campi di colata e dei suoi cowper indicati nella scheda B.6 (per esempio E111 ed E134 per l'altoforno 1). Il rilievo laser misura l’altoforno 1 a 84 m, il 2 a 83 m e il 4 a 90 m; per l’altoforno 5 l’altezza è ricostruita. L'altoforno 3, fermato nel 1994, non è rappresentato. L'altoforno 5 è fermo dal 2015.</p>
+<h3>Coperture e cumuli dei parchi</h3>
+<p>Le coperture del parco minerale e del parco fossile hanno le dimensioni indicate nella documentazione di valutazione d'impatto ambientale (navate di 700 × 254 m, alte 77 m); le date di completamento vengono dalle verifiche ISPRA. Negli anni precedenti i parchi sono a cielo aperto: i cumuli di minerale e carbone hanno la forma rilevata dal modello del terreno (DTM) del rilievo laser 2008–2010, che li registra come rilievi del suolo. L’altezza di ogni cella da 4 m è misurata rispetto al piano circostante.</p>
+<h3>Nastri trasportatori</h3>
+<p>Sono mostrati i nastri del porto, il cui tracciato continuo viene da OpenStreetMap, con la quota del rilievo laser. La rete interna dello stabilimento, che l’ISPRA indica in circa 60 km, non è rappresentata: nel rilievo laser emerge solo a tratti e non permette di ricostruire percorsi continui.</p>
+<h3>Collinette ecologiche</h3>
+<p>I rilievi artificiali tra i parchi minerali e il quartiere Tamburi, costruiti negli anni Settanta lungo la statale Appia, compaiono nel modello del terreno del rilievo laser: la loro estensione misurata è di circa 9,5 ettari, in linea con i circa 9 ettari indicati al momento del sequestro del 2019 (<a href="https://www.ilfattoquotidiano.it/2019/02/05/ilva-sequestrate-collinette-a-ridosso-dei-tamburi-dovevano-proteggere-le-case-sono-incredibile-accumulo-di-rifiuti/4949740/" target="_blank" rel="noopener">Il Fatto Quotidiano, 05/02/2019</a>). Sulla mappa compaiono dal 1975.</p>
+<h3>Porto</h3>
+<p>Il perimetro dello stabilimento in OpenStreetMap segue la recinzione a terra. I moli del porto usati dall’acciaieria sono aree demaniali in concessione e vengono mostrati a parte, con il bordo tratteggiato: il 2°, il 3°, il 4° e il 5° sporgente e la calata 3, come li elenca la nota ILVA DIR/407 dell’11 novembre 2013 (<a href="https://documenti.camera.it/_dati/leg17/lavori/documentiparlamentari/indiceetesti/204/003_RS/00000017.pdf" target="_blank" rel="noopener">Camera dei deputati, Doc. CCIV n. 3</a>), che comprende anche il Parco Coils. I moli sono riconosciuti con la planimetria del <a href="https://port.taranto.it/albopretorio/attachments/article/1307/TAVOLA%20%20C2.12_PLANIMETRIA%20GENERALE%20RIEPILOGATIVA.pdf" target="_blank" rel="noopener">Piano regolatore portuale</a> (tavola C2.12) e ritagliati dalla linea di costa di OpenStreetMap fino agli spigoli dove si staccano dalla banchina; il 5° sporgente ha già un contorno proprio. La calata 3, la banchina fra il 2° e il 3° sporgente, non è disegnata perché la sua larghezza non è nota. Il 3° sporgente compare dal 1973 e il 4° dal 1974, anni di costruzione indicati dall’Autorità portuale. Pontili e dighe vengono da OpenStreetMap.</p>
+<h3>Cokerie</h3>
+<p>Le batterie dei forni a coke sono gli edifici di OpenStreetMap lunghi e stretti che si trovano accanto ai camini di cokefazione (E422–E426); la loro altezza viene dal rilievo laser. Anche i quattro gasometri hanno l’altezza misurata, tra 58 e 83 m.</p>
+
+<h2 id="health">Salute</h2>
+<p>Quando un dato sanitario o ambientale riguarda un periodo, compare nel pannello laterale e colora sulla mappa l'area a cui si riferisce: il quartiere Tamburi, la città di Taranto con Statte, oppure lo stabilimento.</p>
+<table>
+  <tr><th>Dato</th><th>Tipo</th><th>Fonte</th></tr>
+  <tr><td>208 operai morti in incidenti sul lavoro, 1961–2019</td><td>conteggio riportato dalla stampa</td><td>M. Revelli, Il Manifesto, 2019; Il Post, 2013</td></tr>
+  <tr><td>25 lavoratori morti in incidenti nello stabilimento, 2003–2026, con nome e data</td><td>elenco nominativo, ogni caso confrontato con le cronache dell’epoca</td><td>P. De Rubertis, Il Fatto Quotidiano, 02/03/2026; rassegna stampa Contropiano 2003–2012; agenzie e quotidiani locali; Tribunale di Taranto, 2012</td></tr>
+  <tr><td>Morti negli anni del cantiere, 1961–1964</td><td>conteggi riportati da storici locali</td><td>R. Nistri, 2009, citato da A. Leogrande; A. De Palma, 2013</td></tr>
+  <tr><td>Tumori nei bambini (0–14 anni) a Taranto e Statte, 2006–2008: 20 casi contro 13 attesi (+54%)</td><td>incidenza osservata</td><td>Istituto superiore di sanità, aggiornamento SENTIERI 2014</td></tr>
+  <tr><td>Mortalità per mesotelioma a Taranto e Statte, 2013–2017: 3,7 volte la media regionale</td><td>mortalità osservata</td><td>SENTIERI, 6° rapporto, Epidemiologia &amp; Prevenzione 2023</td></tr>
+</table>
+<p class="note">Il perimetro del quartiere Tamburi usato per colorare la mappa è tracciato sulla cartografia ed è indicativo.</p>
+
+<h2 id="air">Qualità dell'aria</h2>
+<p>Le medie annue di PM10 sono calcolate dai dati orari validati pubblicati da <a href="https://www.arpa.puglia.it/pagina3139_dati-storici-qualit-delllaria.html" target="_blank" rel="noopener">ARPA Puglia</a> per gli anni 2005–2025. Sono confrontate due centraline: via Machiavelli, nel quartiere Tamburi, e Talsano, lontano dallo stabilimento. Sono escluse le medie con meno del 75% di ore valide nell'anno, come previsto dal decreto legislativo 155/2010. Le linee del grafico si interrompono negli anni senza media valida.</p>
+<p>Il benzo(a)pirene a via Machiavelli viene dal <a href="https://www.arpa.puglia.it/moduli/output_immagine.php?id=5310" target="_blank" rel="noopener">report ARPA Puglia sul benzo(a)pirene 2016</a>, che riporta le medie annue dal 2009: 1,39 ng/m³ nel 2009, 1,82 nel 2010, 1,14 nel 2011, contro un valore obiettivo di 1 ng/m³.</p>
+
+<h2 id="emissions">Emissioni dello stabilimento</h2>
+<p>Le emissioni annue in aria di polveri PM10 e di diossine e furani sono quelle dichiarate dal gestore al registro europeo delle emissioni industriali (E-PRTR) e pubblicate dall'<a href="https://industry.eea.europa.eu/industrial-emissions/industrial-site?siteInspireId=IT.CAED%2F741231003.SITE" target="_blank" rel="noopener">Agenzia europea dell'ambiente</a>, dal 2007 al 2023. Sono usate solo le dichiarazioni dello stabilimento siderurgico (codice 2007001763), senza la centrale elettrica che dal 2015 il registro raggruppa nello stesso sito.</p>
+
+<h2 id="production">Produzione di acciaio</h2>
+<p>Una serie pubblica e continua della produzione dello stabilimento non esiste. Il grafico riporta solo gli anni per cui è stata trovata una fonte (USGS, ISPRA, dati aziendali, stampa) e non collega gli anni lontani tra loro.</p>
+
+<h2 id="limits">Limiti della ricostruzione</h2>
+<ul>
+  <li>Gli edifici della città sono quelli attuali in tutti gli anni: nel passato il costruito era minore.</li>
+  <li>Le altezze e le forme misurate descrivono lo stabilimento nel 2008–2010, anche quando la mappa mostra altri anni.</li>
+  <li>La data di costruzione delle collinette ecologiche è indicata dalle fonti solo come «anni Settanta».</li>
+  <li>L'estensione dello stabilimento è quella attuale dal 1965; solo gli altoforni del raddoppio compaiono dal 1975.</li>
+  <li>Il perimetro mappato in OpenStreetMap misura 9,7 km²; le fonti ufficiali indicano circa 15 km², includendo aree esterne al recinto principale.</li>
+  <li>Dei 278 camini della scheda B.6 ne sono rappresentati 115: quelli leggibili sulla planimetria, che comprendono tutti i camini alti dell'area a caldo.</li>
+</ul>
+
+<h2 id="sources">Elenco delle fonti</h2>
+<p class="note">Generato dai dati del sito: per ogni fonte è indicato a quale evento o dato si riferisce.</p>
+<ul class="source-list" id="source-list"></ul>
+<h3>Dati e documenti tecnici</h3>
+<ul class="source-list">
+  <li>OpenStreetMap contributors, dati cartografici, licenza ODbL.</li>
+  <li>Ministero dell’Ambiente, Piano straordinario di telerilevamento, rilievo LiDAR DSM e DTM a 1 m, voli 2008–2010, <a href="https://gn.mase.gov.it/portale/distribuzione-dati-pst" target="_blank" rel="noopener">Banca dati PST</a>, licenza CC BY 4.0.</li>
+  <li>Ministero dell'Ambiente, Valutazioni e autorizzazioni ambientali, procedura AIA 2011 dello stabilimento di Taranto: <a href="https://va.mite.gov.it/File/Documento/260022" target="_blank" rel="noopener">scheda B.20</a>, <a href="https://va.mite.gov.it/File/Documento/260236" target="_blank" rel="noopener">scheda B.6</a>.</li>
+  <li>ARPA Puglia, <a href="https://www.arpa.puglia.it/pagina3139_dati-storici-qualit-delllaria.html" target="_blank" rel="noopener">dati storici della qualità dell'aria 2005–2025</a> e <a href="https://www.arpa.puglia.it/pagina3082_report-sulla-determinazione-di-ipa-e-metalli-nel-pm10-ai-sensi-del-dlgs-1552010.html" target="_blank" rel="noopener">report su IPA e metalli</a>.</li>
+  <li>Agenzia europea dell'ambiente, <a href="https://industry.eea.europa.eu/" target="_blank" rel="noopener">European Industrial Emissions Portal</a>.</li>
+  <li>ISPRA, <a href="https://www.isprambiente.gov.it/files2022/controlli-ambientali/stato-attuazione_interventi_dpcm29092017_aggiornamento_i-semestre2022.pdf" target="_blank" rel="noopener">stato di attuazione degli interventi del DPCM 29/09/2017</a> e <a href="https://www.isprambiente.gov.it/files2026/controlli-ambientali/relazione-ispra-controlli-stabilimento-ilva-anno-2025_31marzo2026.pdf" target="_blank" rel="noopener">13° rapporto controlli (2026)</a>.</li>
+</ul>
+
+<h2 id="licences">Licenze</h2>
+<p>Dati cartografici © OpenStreetMap contributors, disponibili con licenza Open Database License. Rilievo LiDAR © Ministero dell’Ambiente e della Sicurezza Energetica, licenza CC BY 4.0. I dati di ARPA Puglia, ISPRA e dell'Agenzia europea dell'ambiente sono pubblici e citati alla fonte.</p>
+</main>
+<script src="events.js"></script>
+<script>
+// collects every source cited by events and data (except estimates, which the site does not show)
+const entries = new Map();
+const add = (sources, where) => sources.forEach(([t, u]) => { if (!entries.has(u)) entries.set(u, { t, where: [] }); entries.get(u).where.push(where); });
+EVENTS.forEach(e => add(e.sources, `${e.date}: ${e.title}`));
+PERIODS.filter(p => p.kind !== 'estimate').forEach(p => add(p.sources, p.title));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+document.getElementById('source-list').innerHTML = [...entries].map(([u, { t, where }]) =>
+  `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a> <span class="where">— ${esc(where.join('; '))}</span></li>`).join('');
+</script>
+</body>
+</html>

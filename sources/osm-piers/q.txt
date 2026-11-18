@@ -1,0 +1,9 @@
+[out:json][timeout:60];
+(
+  way["name"~"[Ss]porgente|[Cc]alata|[Cc]oils|Acciaierie|ILVA|Ilva"](40.455,17.13,40.50,17.22);
+  relation["name"~"[Ss]porgente|[Cc]alata|[Cc]oils|Acciaierie|ILVA|Ilva"](40.455,17.13,40.50,17.22);
+  way["man_made"="pier"]["area"="yes"](40.455,17.13,40.50,17.22);
+  way["landuse"~"industrial|port"](40.455,17.15,40.49,17.215);
+  way["operator"~"Ilva|ILVA|Acciaierie|Mittal"](40.455,17.13,40.50,17.22);
+);
+out tags geom;
