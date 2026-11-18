@@ -1,0 +1,8 @@
+# only the static site is deployed; build inputs and scripts stay in the repository
+sources/
+drafts/
+osm*.json
+heights.json
+conveyors.js
+*.py
+requirements.txt
