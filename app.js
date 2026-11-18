@@ -43,6 +43,9 @@ const mapEl = $('#map');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const FACTORY_COLOR = ['match', ['get', 'kind'], 'canopy', '#9aa1a7', 'shed', '#4a5056', 'silo', '#c3c8cb', 'tank', '#b3b9bd', '#353a3f'];
 const VIEW_2D = { bounds: [[17.165, 40.472], [17.242, 40.528]], padding: 10 };  // south down to the concession piers
+// default view from the Tamburi side: the district's houses in front give the plant its scale
+const VIEW_3D = innerWidth < 860 ? { center: [17.219, 40.4985], zoom: 13.9, pitch: 66, bearing: -52 }
+  : { center: [17.222, 40.497], zoom: 14.9, pitch: 72, bearing: -52 };
 (function addVolumes() {
   const k = Math.cos(40.5 * Math.PI / 180), M = 111320;
   const g = RELIEFS.grid;
@@ -55,24 +58,36 @@ const VIEW_2D = { bounds: [[17.165, 40.472], [17.242, 40.528]], padding: 10 };  
   }
   PORT.volumes.features.forEach(f => PLANTS.features.push(f));
   PLANTS.labels.push({ text: 'Collinette ecologiche', lonlat: [17.2235, 40.4962], kind: 'unit', since: 1975 },
-    { text: '5° sporgente', lonlat: PORT.volumes.features.find(f => f.properties.kind === 'quay').geometry.coordinates[0][0], kind: 'unit', since: 1965 },
-    { text: 'Moli dello stabilimento', lonlat: [17.2095, 40.4728], kind: 'unit', since: 1965 });
+    { text: '5° sporgente', lonlat: PORT.volumes.features.find(f => f.properties.kind === 'quay').geometry.coordinates[0][0], kind: 'unit', since: 1980 },
+    { text: 'Moli dello stabilimento', lonlat: [17.2095, 40.4728], kind: 'unit', since: 1964 });
 })();
 const zoneGeo = n => GEO.zones.features.find(f => f.properties.zone === n);
 const centroid = f => { const r = f.geometry.coordinates[0][0]; return r.slice(1).reduce((a, p) => [a[0] + p[0] / (r.length - 1), a[1] + p[1] / (r.length - 1)], [0, 0]); };
 
+const labelMarkers = [];
 const map = new maplibregl.Map({
   container: 'map-gl',
   style: { version: 8, sources: {}, layers: [{ id: 'land', type: 'background', paint: { 'background-color': '#c5c9bb' } }] },
-  bounds: VIEW_2D.bounds,
-  fitBoundsOptions: { padding: VIEW_2D.padding },
+  ...VIEW_3D,
   maxBounds: GEO.bounds,
-  maxPitch: 70,
+  maxPitch: 80,
   maxZoom: 17.5,  // beyond this the data (1 m survey, OSM buildings) adds no detail
   attributionControl: false,
   antialias: true,
 });
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+// at eye level MapLibre still draws markers that are behind the camera, mirrored: hide them
+map.on('move', () => {
+  const eye = map.getPitch() > 80 && map.transform.getCameraPosition().lngLat, k = Math.cos(40.5 * Math.PI / 180);
+  for (const mk of labelMarkers) {
+    let behind = false;
+    if (eye) {
+      const p = mk.getLngLat(), dir = Math.atan2((p.lng - eye.lng) * k, p.lat - eye.lat) * 180 / Math.PI;
+      behind = Math.abs(((dir - map.getBearing()) % 360 + 540) % 360 - 180) > 75;
+    }
+    mk.getElement().classList.toggle('behind', behind);
+  }
+});
 map.on('zoom', () => $('#map').classList.toggle('zoomed-in', map.getZoom() >= 14.5));
 map.addControl({
   onAdd: () => Object.assign(document.createElement('div'), { className: 'maplibregl-ctrl maplibregl-ctrl-group',
@@ -133,6 +148,7 @@ map.on('load', () => {
   });
   map.addLayer({ id: 'reliefs-hover', type: 'fill', source: 'plants', filter: ['in', ['get', 'kind'], ['literal', ['pile', 'hill']]],
     paint: { 'fill-opacity': 0 } }, 'plants');
+  map.addLayer({ id: 'projector', type: 'custom', renderingMode: '3d', render: (gl, matrix) => { projection = matrix; } });
   map.on('pitchend', () => updateMap(year, EVENTS.filter(e => e.year === year)));
   map.addSource('port-lines', { type: 'geojson', data: PORT.lines });
   map.addLayer({ id: 'port-lines', type: 'line', source: 'port-lines', paint: { 'line-color': '#6d7276', 'line-width': ['interpolate', ['linear'], ['zoom'], 12, .6, 17, 3] } }, 'plants');
@@ -141,13 +157,13 @@ map.on('load', () => {
     el.className = 'label ' + kind;
     if (since) el.dataset.since = since;
     el.textContent = text;
-    new maplibregl.Marker({ element: el }).setLngLat(lonlat).addTo(map);
+    labelMarkers.push(new maplibregl.Marker({ element: el }).setLngLat(lonlat).addTo(map));
   }
   for (const { text, lat, lon, kind } of GEO.labels) {
     const el = document.createElement('div');
     el.className = 'label ' + kind;
     el.textContent = text;
-    new maplibregl.Marker({ element: el }).setLngLat([lon, lat]).addTo(map);
+    labelMarkers.push(new maplibregl.Marker({ element: el }).setLngLat([lon, lat]).addTo(map));
   }
   const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, maxWidth: '260px', className: 'feature-popup' });
   // parts of the same structure (bands of a dome, rows of piles, blast furnace with cowpers and casthouse)
@@ -216,7 +232,7 @@ function updateAreas(y) {
   map.setPaintProperty('city-tint', 'fill-extrusion-color', color);
   return has('plant');
 }
-const YARDS = { ore: 'parco minerale', coal: 'parco del carbone (fossile)', other: 'parco minerario secondario' };
+const YARDS = { ore: 'parco minerale', coal: 'parco del carbone (fossile)', other: 'parco minerario secondario', open: 'parchi non coperti' };
 const OSM_KINDS = { industrial: 'Capannone o impianto', shed: 'Capannone', canopy: 'Tettoia', silo: 'Silo', tank: 'Serbatoio' };
 function describe(p, layer) {
   const LIDAR = 'rilievo laser del Ministero dell’Ambiente, 2008–2010';
@@ -233,7 +249,8 @@ function describe(p, layer) {
       return [`Copertura del ${YARDS[p.yard]}`, p.yard === 'other' ? 'costruita tra il 2019 e il 2022'
         : `completata nel ${p.since}; navata di 700 × 254 m, alta 77 m`, p.yard === 'other' ? 'Ricostruzione su base cartografica' : 'Fonte: documentazione VIA, ministero dell\'Ambiente; ISPRA'];
     case 'pile':
-      return [`Cumuli del ${YARDS[p.yard]}`, `a cielo aperto fino al ${p.until}; forma rilevata nel 2008–2010`, `Fonte: ${LIDAR}`];
+      return p.yard === 'open' ? ['Cumuli dei parchi non coperti', 'materie prime all’aperto, fuori dalle coperture; forma rilevata nel 2008–2010', `Fonte: ${LIDAR}`]
+        : [`Cumuli del ${YARDS[p.yard]}`, `a cielo aperto fino al ${p.until}; forma rilevata nel 2008–2010`, `Fonte: ${LIDAR}`];
     case 'conveyor':
       return ['Nastro trasportatore del porto', `collega le banchine allo stabilimento, a circa ${Math.round(p.h)} m da terra`, `Tracciato: OpenStreetMap; quota: ${LIDAR}`];
     case 'hill':
@@ -278,7 +295,7 @@ function updateMap(y, ev) {
   if (phase !== 'countryside') present.add('factory');
   if (phase !== 'countryside' && PORT.concessions.features.some(c => c.properties.since <= y)) present.add('concession');
   if (phase === 'active' && (y < 2020 || present.has('pile'))) present.add('yards');
-  if (y < 2026 && production(y) > 0) present.add('dust');
+  if (y < 2026 && production(y) > 0) present.add('dust').add('smoke');
   document.querySelectorAll('#legend [data-item]').forEach(el => { el.hidden = !el.dataset.item.split(' ').some(t => present.has(t)); });
   vis('countryside', phase === 'countryside');
   vis('grounds', phase !== 'countryside');
@@ -302,9 +319,11 @@ function updateMap(y, ev) {
   document.querySelectorAll('.label[data-since]').forEach(el => { el.style.display = y < +el.dataset.since ? 'none' : ''; });
   const m = GEO.measures;
   const kmPiers = PORT.concessions.features.filter(c => c.properties.since <= y).reduce((t, c) => t + km2(c.geometry.coordinates[0]), 0);
-  $('#measures').innerHTML = y < 1960 ? '' : `<strong>${String(m.area_km2).replace('.', ',')} km²</strong> a terra, ${Math.round(m.area_km2 / m.old_town_km2)} volte la Città vecchia ` +
-    `(le <a href="https://www.ilpost.it/2026/10/18/ex-ilva-storia/" target="_blank" rel="noopener">fonti ufficiali</a> parlano di circa 15 km²)` +
-    `${kmPiers ? `, più <strong>${kmPiers.toFixed(1).replace('.', ',')} km²</strong> di moli in concessione nel porto` : ''}. <strong>${m.rail_km} km</strong> di binari interni mappati.`;
+  const km2Text = String(m.area_km2).replace('.', ',');
+  $('#measures').hidden = y < 1960;
+  $('#measures summary').innerHTML = `<strong>${km2Text} km²</strong><span class="wide"> · ${Math.round(m.area_km2 / m.old_town_km2)} volte la Città vecchia</span>`;
+  $('#measures p').innerHTML = `${km2Text} km² è il perimetro a terra dello stabilimento, ${Math.round(m.area_km2 / m.old_town_km2)} volte la Città vecchia (le <a href="https://www.ilpost.it/2026/10/18/ex-ilva-storia/" target="_blank" rel="noopener">fonti ufficiali</a> parlano di circa 15 km²)` +
+    `${kmPiers ? `, a cui si aggiungono <strong>${kmPiers.toFixed(1).replace('.', ',')} km²</strong> di moli in concessione nel porto` : ''}. Dentro corrono <strong>${m.rail_km} km</strong> di binari.`;
   map.setPaintProperty('grounds', 'fill-color', phase === 'construction' ? '#b4ae9c' : '#80868b');
   map.setPaintProperty('outline', 'line-dasharray', phase === 'construction' ? [3, 2] : [1, 0]);
   vis('concessions', phase !== 'countryside');
@@ -324,7 +343,7 @@ function updateMap(y, ev) {
   map.setPaintProperty('concessions-outline', 'line-width', whole ? 3 : 1);
 }
 
-let in3d = false;
+let view = '3d';  // '3d' | 'top'
 function showPanel(open) {
   document.body.classList.toggle('map-only', !open);
   const b = $('#full-map'), text = open ? 'Mappa a schermo intero' : 'Mostra i dettagli';
@@ -338,14 +357,15 @@ function showPanel(open) {
 showPanel(true);
 $('#full-map').addEventListener('click', () => showPanel(document.body.classList.contains('map-only')));
 
-$('#view').addEventListener('click', () => {
-  in3d = !in3d;
-  const duration = reducedMotion ? 0 : 1400;
-  if (in3d) map.easeTo({ center: [17.212, 40.499], zoom: 13.75, pitch: 58, bearing: -22, duration });
-  else map.easeTo({ ...map.cameraForBounds(VIEW_2D.bounds, { padding: VIEW_2D.padding, bearing: 0 }), pitch: 0, bearing: 0, duration });
-  $('#view').textContent = in3d ? 'Vista dall\'alto' : 'Vista 3D';
+function setView(v) {
+  view = v;
+  const duration = reducedMotion ? 0 : 1800;
+  if (v === 'top') map.easeTo({ ...map.cameraForBounds(VIEW_2D.bounds, { padding: VIEW_2D.padding, bearing: 0 }), pitch: 0, bearing: 0, duration });
+  else map.easeTo({ ...VIEW_3D, duration });
+  $('#view').textContent = v === 'top' ? 'Vista 3D' : 'Vista dall\'alto';
   updateMap(year, EVENTS.filter(e => e.year === year));
-});
+}
+$('#view').addEventListener('click', () => setView(view === 'top' ? '3d' : 'top'));
 
 function production(y) {
   const p = PRODUCTION;
@@ -377,16 +397,63 @@ function animateDust() {
   while (particles.length < count) particles.push({ t: Math.random(), dx: Math.random() * 400 - 200, dy: Math.random() * 300 - 150 });
   particles.length = count;
   const scale = 2 ** (map.getZoom() - 14);
+  // at eye level ground particles next to the camera would fill the screen: keep them a few hundred metres away
+  const eye = map.getPitch() > 80 && map.transform.getCameraPosition().lngLat;
   for (const p of particles) {
     if (!reducedMotion) p.t = (p.t + 0.003) % 1;
     // ~1.4 km south-east in one cycle
-    const q = map.project([PX + (p.dx + p.t * 1300) * MLON, PY + (p.dy - p.t * 600) * MLAT]);
+    const lng = PX + (p.dx + p.t * 1300) * MLON, lat = PY + (p.dy - p.t * 600) * MLAT;
+    if (eye && Math.hypot((lng - eye.lng) / MLON, (lat - eye.lat) / MLAT) < 450) continue;
+    const q = map.project([lng, lat]);
     // appears quickly, thins out as it spreads; size capped at every zoom
     ctx.globalAlpha = 0.7 * Math.min(1, p.t * 8) * (1 - p.t);
     const r = Math.min(70, Math.max(6, (5 + p.t * 14) * scale));
     ctx.drawImage(grain, q.x - r, q.y - r, 2 * r, 2 * r);
   }
+  drawSmoke(scale);
   if (!reducedMotion) requestAnimationFrame(animateDust);
+}
+
+// smoke from the stacks with a documented height; illustrative like the dust, same intensity
+const smokeSprite = (() => {
+  const c = document.createElement('canvas'); c.width = c.height = 64;
+  const g = c.getContext('2d'), r = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+  r.addColorStop(0, 'rgba(228,226,220,.9)'); r.addColorStop(.55, 'rgba(214,212,206,.4)'); r.addColorStop(1, 'rgba(214,212,206,0)');
+  g.fillStyle = r; g.fillRect(0, 0, 64, 64);
+  return c;
+})();
+const EMITTERS = PLANTS.features
+  .filter(f => f.properties.kind === 'e312' || f.properties.kind === 'furnace'
+    || (f.properties.kind === 'stack' && f.properties.official && /^E42[2-5]$/.test(f.properties.code)))
+  .map(f => ({ ...f.properties, at: centroid({ geometry: { coordinates: [f.geometry.coordinates] } }), puffs: [] }));
+// MapLibre projects only ground points: a no-op custom layer hands over the 3D matrix of every frame
+let projection = null;
+const project3d = (lng, lat, metres) => {
+  const m = projection, c = maplibregl.MercatorCoordinate.fromLngLat([lng, lat], metres);
+  const w = m[3] * c.x + m[7] * c.y + m[11] * c.z + m[15];
+  if (w <= 0) return null;
+  return { x: ((m[0] * c.x + m[4] * c.y + m[8] * c.z + m[12]) / w + 1) / 2 * canvas.clientWidth,
+           y: (1 - (m[1] * c.x + m[5] * c.y + m[9] * c.z + m[13]) / w) / 2 * canvas.clientHeight };
+};
+function drawSmoke() {
+  if (!projection) return;
+  const phase = era(year)[1];
+  for (const e of EMITTERS) {
+    const on = phase === 'active' && (e.since || 1965) <= year && !(e.stopped <= year);
+    const count = on ? Math.round(intensity * 22) : 0;
+    while (e.puffs.length < count) e.puffs.push({ t: Math.random(), jx: Math.random() * 40 - 20, jy: Math.random() * 40 - 20 });
+    e.puffs.length = count;
+    for (const p of e.puffs) {
+      if (!reducedMotion) p.t = (p.t + 0.0025) % 1;
+      // rises ~250 m above the top while the wind carries it ~800 m south-east
+      const lng = e.at[0] + (p.jx + p.t * 700) * MLON, lat = e.at[1] + (p.jy - p.t * 330) * MLAT, z = e.h + 10 + p.t * 250;
+      const q = project3d(lng, lat, z), q2 = q && project3d(lng + (12 + p.t * 90) * MLON, lat, z);
+      if (!q2) continue;
+      const r = Math.min(140, Math.max(3, Math.hypot(q2.x - q.x, q2.y - q.y)));
+      ctx.globalAlpha = 0.55 * Math.min(1, p.t * 6) * (1 - p.t);
+      ctx.drawImage(smokeSprite, q.x - r, q.y - r, 2 * r, 2 * r);
+    }
+  }
 }
 if (reducedMotion) map.on('render', animateDust);
 
@@ -598,5 +665,6 @@ axis.addEventListener('keydown', e => {
   show(Math.min(MAX, Math.max(MIN, y)));
 });
 
-show(Math.min(MAX, Math.max(MIN, +location.hash.slice(1) || MIN)));
+// without a year in the address, open on the first year of the working plant
+show(Math.min(MAX, Math.max(MIN, +location.hash.slice(1) || 1965)));
 if (!reducedMotion) animateDust();

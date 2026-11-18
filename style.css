@@ -89,14 +89,19 @@ body { background: var(--sea); color: var(--ink); font: 16px/1.5 var(--serif);
 .label.water { color: #d3dee1; font-style: italic; font-weight: 400; text-shadow: none; }
 .label.unit { font-size: 12px; font-weight: 700; color: #f2f3f0; text-shadow: 0 0 3px #1d2225, 0 0 6px #1d2225; }
 [data-phase="countryside"] .label.unit, [data-phase="construction"] .label.unit { display: none; }
-#controls { position: absolute; left: 16px; top: 16px; z-index: 1; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+#controls { position: absolute; left: 16px; top: 16px; z-index: 1; display: flex; gap: 8px; align-items: flex-start; flex-wrap: wrap; }
 #controls button { font: 700 14px var(--sans); background: var(--paper); color: var(--ink);
   border: 0; border-radius: 2px; padding: 8px 14px; cursor: pointer; box-shadow: 0 2px 8px rgb(0 0 0 / .25); }
-#measures { position: absolute; left: 16px; top: 62px; z-index: 1; margin: 0; max-width: 360px; font: 13px/1.4 var(--sans);
-  color: var(--paper); background: rgb(29 34 37 / .82); padding: 8px 10px; border-radius: 2px; }
-#measures strong { font-size: 15px; }
+/* a small chip next to the 3D button; the full measures open on click */
+#measures { font: 13px/1.4 var(--sans); color: var(--paper); background: rgb(29 34 37 / .82); border-radius: 2px; max-width: 340px; }
+#measures summary { padding: 7px 10px; cursor: pointer; list-style: none; }
+#measures summary::-webkit-details-marker { display: none; }
+#measures summary::after { content: " ⓘ"; opacity: .7; }
+#measures p { margin: 0; padding: 0 10px 8px; }
+#measures strong { font-size: 14px; }
 #measures a { color: inherit; }
-#measures:empty { display: none; }
+#measures[hidden] { display: none; }
+.label.behind { visibility: hidden; }
 .maplibregl-ctrl-group { border-radius: 2px; }
 .feature-popup .maplibregl-popup-content { font: 13px/1.4 var(--sans); padding: 8px 10px; border-radius: 2px; }
 .feature-popup small { color: var(--muted); }
@@ -114,6 +119,7 @@ body { background: var(--sea); color: var(--ink); font: 16px/1.5 var(--serif);
 #legend { position: absolute; right: 12px; bottom: 12px; width: 190px; background: rgb(242 243 240 / .92); padding: 6px 9px;
   font: 12px/1.5 var(--sans); border-radius: 2px; }
 #legend summary { font-weight: 700; cursor: pointer; }
+#legend[open] { line-height: 1.35; }
 #legend:not([open]) { padding: 6px 10px; }
 #legend .attrib { font-size: 10.5px; line-height: 1.35; color: var(--muted); margin-top: 5px; }
 #legend .attrib a { color: inherit; }
@@ -162,7 +168,7 @@ body.map-only #panel { margin-right: calc(-1 * clamp(320px, 30vw, 420px)); visib
   #marks .gap { display: none; }
   #legend { display: none; }
   .era { font-size: 0; }
-  /* small map: the measures box would cover the controls; unit labels only once zoomed in */
-  #measures { display: none; }
+  /* small map: unit labels only once zoomed in; the measures chip shows only the area */
+  #measures .wide { display: none; }
   #map:not(.zoomed-in) .label.unit { display: none; }
 }

@@ -90,6 +90,23 @@ def main():
         p = f['properties']
         if p['kind'] == 'dome' and p['yard'] not in yards:  # the first band is the whole footprint
             yards[p['yard']] = ([tuple(q) for q in f['geometry']['coordinates'][0][:-1]], p['since'])
+    # the yard area beyond the domes: piles that were never covered (OSM yards zone minus the dome footprints)
+    geo = open(os.path.join(HERE, 'map-data.js'), encoding='utf-8').read()
+    geo = json.loads(geo[geo.index('=') + 1:geo.rindex(';')])
+    yard_zone = []
+    for z in geo['zones']['features']:
+        if z['properties']['zone'] == 'yards':
+            g = z['geometry']
+            yard_zone += [[tuple(q) for q in r[:-1]] for r in ([g['coordinates'][0]] if g['type'] == 'Polygon' else [p[0] for p in g['coordinates']])]
+    OPEN_UNTIL = 2026
+
+    def open_yard(lon, lat):
+        m = np.zeros(lon.shape, bool)
+        for r in yard_zone:
+            m |= inside(lon, lat, r)
+        for polygon, _ in yards.values():
+            m &= ~inside(lon, lat, polygon)
+        return m
 
     counts = {}
 
@@ -124,6 +141,9 @@ def main():
         cells(m, kind='pile', yard=yard, until=since - 1, measured=True, group='piles-' + yard,
               tint={'ore': '#8a4b2e', 'coal': '#2f2b28', 'other': '#6b6a66'}[yard])
         counts[yard] = (int(m.sum()), float(np.nanpercentile(rel[m], 95)) if m.any() else 0)
+    m = open_yard(LON, LAT) & (rel >= 1.5)
+    cells(m, kind='pile', yard='open', until=OPEN_UNTIL, measured=True, group='piles-open', tint='#9a5a3c')
+    counts['open'] = (int(m.sum()), float(np.nanpercentile(rel[m], 95)) if m.any() else 0)
 
     # top view: images shaded from the 1 m DTM (the 4 m grid of the volumes is too coarse)
     images = []
@@ -139,14 +159,14 @@ def main():
     light = np.clip(0.8 + (-gx * 0.6 + gy * 0.6) / np.sqrt(1 + gx ** 2 + gy ** 2) * 0.9, 0.3, 1.5)  # sun from the north-west
     ny1, nx1 = rel1.shape
 
-    def image(polygon, threshold, colour, **props):
+    def image(polygon, threshold, colour, mask_fn=None, **props):
         xs, ys = [q[0] for q in polygon], [q[1] for q in polygon]
         i0, i1 = max(0, int((min(xs) - LON0) / MLON / C1)), min(nx1, int((max(xs) - LON0) / MLON / C1) + 1)
         j0, j1 = max(0, int((LAT1 - max(ys)) / MLAT / C1)), min(ny1, int((LAT1 - min(ys)) / MLAT / C1) + 1)
         lon = LON0 + (np.arange(i0, i1)[None, :] + 0.5) * C1 * MLON + np.zeros((j1 - j0, 1))
         lat = LAT1 - (np.arange(j0, j1)[:, None] + 0.5) * C1 * MLAT + np.zeros((1, i1 - i0))
         r = np.nan_to_num(rel1[j0:j1, i0:i1])
-        m = inside(lon, lat, polygon) & (r >= threshold)
+        m = (mask_fn(lon, lat) if mask_fn else inside(lon, lat, polygon)) & (r >= threshold)
         rgb = np.array(colour, np.float32)[None, None, :] * light[j0:j1, i0:i1, None]
         im = Image.fromarray(np.clip(rgb, 0, 255).astype(np.uint8), 'RGB')
         # x3: interpolated shading, outline recomputed as a threshold (sharp even at high zoom)
@@ -166,6 +186,7 @@ def main():
     image(HILLS, 2, (92, 118, 60), kind='hill', since=1975)
     for yard, (polygon, since) in yards.items():
         image(polygon, 1.5, {'ore': (150, 62, 34), 'coal': (48, 44, 42), 'other': (98, 96, 92)}[yard], kind='pile', yard=yard, until=since - 1)
+    image([q for r in yard_zone for q in r], 1.5, (165, 95, 60), mask_fn=open_yard, kind='pile', yard='open', until=OPEN_UNTIL)
 
     for k, (n, h) in counts.items():
         print(f'{k}: {n} cells of 4 m ({n * 16 / 10000:.1f} ha), maximum/95th percentile height {h:.1f} m')

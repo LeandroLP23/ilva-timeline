@@ -45,7 +45,7 @@
     <p class="data-sources">PM10: medie annue ARPA Puglia, centraline di via Machiavelli (Tamburi) e Talsano, sulla stessa scala.
       Emissioni: dichiarate dal gestore al <a href="https://industry.eea.europa.eu/industrial-emissions/industrial-site?siteInspireId=IT.CAED%2F741231003.SITE" target="_blank" rel="noopener">registro europeo E-PRTR</a>; per le diossine 2002–2006, ai registri INES ed EPER.
       Morti sul lavoro: 1961–1964 R. Nistri (2009); dal 2003 elenco nominativo verificato sulle cronache.
-      Acciaio: piani Finsider e archivi IRI (1966–1994), dati ILVA, relazioni del Ministero dell’Ambiente e dell’ISPRA (dal 2005).
+      Acciaio: piani Finsider e archivi IRI (1966–1994), dati ILVA, relazioni del Ministero dell’Ambiente, dell’ISPRA e della Commissione europea (dal 2005).
       Passa sulle righe per leggere i valori, clicca per scegliere l'anno. <a href="methods.html">Metodo e fonti</a></p>
   </div></div>
 </header>
@@ -54,11 +54,11 @@
   <div id="map-gl" aria-label="Mappa dello stabilimento ex Ilva e di Taranto"></div>
   <canvas id="dust" aria-hidden="true"></canvas>
   <div id="controls">
-    <button id="view" type="button">Vista 3D</button>
+    <button id="view" type="button">Vista dall'alto</button>
+    <details id="measures"><summary></summary><p></p></details>
   </div>
-  <p id="measures"></p>
   <p id="big-year" aria-hidden="true">1955</p>
-  <details id="legend" open>
+  <details id="legend">
     <summary>Legenda</summary>
     <div data-item="factory"><i style="background:#353a3f"></i>Capannoni e impianti</div>
     <div data-item="factory"><i style="background:#9aa1a7"></i>Tettoie</div>
@@ -73,6 +73,7 @@
     <div data-item="dome"><i style="background:#e6e3da"></i>Coperture dei parchi</div>
     <div data-item="yards"><i style="background:#c2b393"></i>Parchi minerali</div>
     <div><i style="background:#a4a99b"></i>Città</div>
+    <div data-item="smoke"><i style="background:radial-gradient(rgb(228 226 220), rgb(214 212 206 / .5) 55%, transparent 70%);border-radius:50%;box-shadow:0 0 0 1px #c9c6be inset"></i>Fumo dai camini (animazione illustrativa)</div>
     <div data-item="dust"><i style="background:radial-gradient(rgb(150 72 40), rgb(150 72 40 / .45) 50%, transparent 70%);border-radius:50%"></i>Polveri (animazione illustrativa)</div>
     <div class="attrib">Altezze dal rilievo laser del Ministero dell'Ambiente (2008–2010, CC BY 4.0); camini dalla scheda B.6 dell'AIA 2011.<br>© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></div>
   </details>
