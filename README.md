@@ -58,6 +58,13 @@ Some inputs are large or third-party and are not in the repository; the steps th
 
 The full list of sources, with links, is on the methods page.
 
+## Third-party code and fonts
+
+`vendor/` holds copies served with the site, so it makes no requests to external services:
+
+- [MapLibre GL JS](https://maplibre.org/) 4.7.1, BSD 3-Clause licence (`vendor/maplibre-gl/LICENSE.txt`);
+- the Archivo and Source Serif 4 fonts (latin subset), SIL Open Font License 1.1 (`vendor/fonts/OFL-*.txt`).
+
 ## Licence
 
 - Code: [MIT](LICENSE).
