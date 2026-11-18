@@ -1,5 +1,7 @@
 # Ex-Ilva Taranto, year by year
 
+**Live site: <https://ilva-timeline.vercel.app/>**
+
 A static website (in Italian) on the history of the Taranto steelworks, from the olive groves before 1960 to the shutdown of the blast furnaces in 2026. It combines:
 
 - a map of the plant in 2D and 3D, with building and stack heights measured by the Ministry of the Environment's LiDAR survey;
